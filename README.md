@@ -1,2 +1,14 @@
-# Coffee-as-a-Service-4real
-Modding / hacking of a coffee machine (DeLonghi ECAM 22.110.B Magnifica S) to become an IoT device
+# Coffee-as-a-Service-4-real
+
+## Electromechanical stuff
+
+First step is finished with soldering jumper cables to every switch. I planned to do the same with the LEDs for reading out the machine's status and errors but the SMD-LEDs are pretty small and my solder tip seemed to big for proper soldering. You can see them some of them (DL3 - DL5) in the first row of the circuit board.
+![Image of modified frontpanel](/images/frontpanel_modified.JPG)
+
+The frontpanel itself looked very spacious at first, but there is a grid of plastic under the buttons giving minimal space for running the wires. This plastic construction is for transfering the mechanical force to the actual pushbuttons on the circuit and manages to transfer the light of the SMD-LEDs to the front. So if you really mess up, the buttons stop working, the LED's light will be blocked and the case of the frontpanel will not close anyway. You could cut the grid a little bit, but I wanted to modify the machine as little as possible.
+
+I will have to rework the running of the wires a little bit because right now the button press feels softer than before. Meaning the wires are pressed down by the plastic grid, eventually causing damage to the isolation in the future.
+
+Unfortunately I did not make a photo of this mess :-(
+
+![Image of the openened frontpanel](/images/frontpanel_unmodified_opened.JPG)
