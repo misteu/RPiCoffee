@@ -45,3 +45,7 @@ There is a hole for the original flat wire which is big enough for my hacked wir
 
 Here is the place where the Raspberry Pi and the interface circuit is planned to stay at. This looks like a safe place for electronics (you have to be aware of humidity) because the mainboard of the machine also is placed there.
 ![Image of the cables coming from the fron panel and the area for hacked stuff](images/cables_sideview_place_for_hacked_stuff.jpg)
+
+Testing of the hacked frontpanel:
+
+![Hotwiring the espresso button](images/hotwire1.gif)![Espresso out](images/hotwire2.gif)
