@@ -15,7 +15,7 @@ The easiest way is to hack the existing frontpanel with overriding its simple pu
 
 I will stick to the Raspberry because it is cheap (around 12 Eur for the Zero W) and I do not have to make any hardware modifications to get it up and running. The Raspberry will be prepared with a minimal setup based on Raspbian Lite described in this article: https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html
 
-The Raspberry will be powered by its own power supply because I do not know how stable the coffee machines DC rails are. I read about crashing Raspberries because of to noisey power supplies. If everything works fine I will parallel the 230V rails of the coffee machine and the Raspberry's power supply.
+It will be powered by its own USB-power supply because I do not know how stable the coffee machines DC rails are and do not have the equipment for measurements. If everything works fine I will parallel the 230V rails of the coffee machine and the Raspberry's power supply.
 
 ## Progress
 
