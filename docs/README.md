@@ -1,16 +1,23 @@
 # RPiCoffee
 
-This project's goal is to have a coffee machine being able to respond to different HTTP-Responses because no one likes to wait for the machine.
+This project's goal is to enable a coffee machine being able to respond to different HTTP-Responses. 
 
-Possible scenarios are:
+'Cause nobody likes to wait for the machine.
+
+**Possible scenarios are:**
 - turn on and shutting down the machine via HTTP-request
 - brewing single and double espresso via HTTP-request
 - brewing single and double coffee via HTTP-request
 - starting the rinse program via HTTP-request (good for preheating the system)
-- reading out machine status (e.g. water level, coffee bean depot, temperature, LED status, errors, ...)
+- reading out machine status (e.g. water level, coffee bean depot, temperature, errors, ...)
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
+The easiest way is to hack the existing frontpanel with overriding its simple pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has wifi built in.
+
+I will stick to the Raspberry because it is cheap (around 12 Eur for the Zero W) and I do not have to make any hardware modifications to get it up and running. The Raspberry will be prepared with a minimal setup based on Raspbian Lite described in this article: [https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html](https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html)
+
+It will be powered by its own USB-power supply because I do not know how stable the coffee machines DC rails are and do not have the equipment for measurements. If everything works fine I will parallel the 230V rails of the coffee machine and the Raspberry's power supply.
 
 ## Progress
 
