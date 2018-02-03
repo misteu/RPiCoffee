@@ -1,6 +1,8 @@
 # RPiCoffee
 
-This project's goal is to enable a coffee machine being able to respond to different HTTP-Responses. 'Cause nobody likes to wait for the machine.
+This project's goal is to enable a coffee machine being able to respond to different HTTP-Responses. 
+
+'Cause nobody likes to wait for the machine.
 
 **Possible scenarios are:**
 - turn on and shutting down the machine via HTTP-request
