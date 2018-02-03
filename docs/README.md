@@ -18,6 +18,7 @@ First step is finished with soldering jumper cables to every switch. I planned t
 I will have to rework the running of the wires a little bit because right now the button press feels softer than before. Meaning, the wires are pressed down by the plastic grid, eventually causing damage to the isolation in the future.
 
 ![Image of modified frontpanel](/docs/images/frontpanel_modified.JPG)
+![Image of modified frontpanel](/docs/images/frontpanel_modified_cablerunV1.JPG)
 
 There is a hole for the original flat wire which is big enough for my hacked wires.
 ![Image of the cable duct](/docs/images/kind_of_cable_duct.JPG)
