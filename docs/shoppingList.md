@@ -1,3 +1,4 @@
+### Raspberry and power 
 1x Raspberry Pi Zero W
 
 1x
@@ -5,7 +6,7 @@ NT MUSB 2 WS
 USB-Ladegerät, 5 V, 2000 mA, Micro-USB
 6,00 €
 
-other stuff from reichelt (for the interface circuit)
+### other stuff from reichelt (for the interface circuit)
 
 3x
 MOS 4051
