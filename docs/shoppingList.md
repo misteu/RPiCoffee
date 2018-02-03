@@ -1,4 +1,4 @@
-### Raspberry and power 
+### Raspberry and power supply
 1x Raspberry Pi Zero W
 
 1x
