@@ -1,4 +1,4 @@
-# Coffee-as-a-Service-4-real
+# RPiCoffee aka Coffee as a Service 4 real
 Modding / hacking of a coffee machine (DeLonghi ECAM 22.110.B Magnifica S) for IoT capabilities 
 
 See github-Page for working progress: https://misteu.github.io/Coffee-as-a-Service-4-real/
