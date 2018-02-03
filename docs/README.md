@@ -2,7 +2,9 @@
 ## Progress
 
 [x] Soldering jumper wires to all of the frontpanel buttons
+
 [ ] Rework on the wire management
+
 [ ] Solder the interface circuit
 
 ### Electromechanical stuff
