@@ -11,6 +11,11 @@ Possible scenarios are:
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
+The easiest way is to hack the existing frontpanel with overriding its simple pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has wifi built in.
+
+I will stick to the Raspberry because it is cheap (around 12 Eur for the Zero W) and I do not have to make any hardware modifications to get it up and running. The Raspberry will be prepared with a minimal setup based on Raspbian Lite described in this article: https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html
+
+The Raspberry will be powered by its own power supply because I do not know how stable the coffee machines DC rails are. I read about crashing Raspberries because of to noisey power supplies. If everything works fine I will parallel the 230V rails of the coffee machine and the Raspberry's power supply.
 
 ## Progress
 
