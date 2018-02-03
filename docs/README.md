@@ -1,4 +1,17 @@
 # RPiCoffee
+
+This project's goal is to have a coffee machine being able to respond to different HTTP-Responses because no one likes to wait for the machine.
+
+Possible scenarios are:
+- turn on and shutting down the machine via HTTP-request
+- brewing single and double espresso via HTTP-request
+- brewing single and double coffee via HTTP-request
+- starting the rinse program via HTTP-request (good for preheating the system)
+- reading out machine status (e.g. water level, coffee bean depot, temperature, LED status, errors, ...)
+- rendering a responsive web-app for better user experience
+- data logging and visualisation in the web-app
+
+
 ## Progress
 
 [x] Soldering jumper wires to all of the frontpanel buttons
