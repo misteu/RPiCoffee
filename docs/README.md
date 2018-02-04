@@ -27,6 +27,8 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Solder the interface circuit
 
+[ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
+
 ### Electromechanical stuff
 
 The frontpanel looked very spacious at first, but there is a grid of plastic under the buttons giving minimal space for running the wires. This plastic construction is for transfering the mechanical force to the actual pushbuttons on the circuit and manages to transfer the light of the SMD-LEDs to the front. So if you really mess up, the buttons stop working, the LED's light will be blocked and the case of the frontpanel will not close anyway. You could cut the grid a little bit, but I wanted to modify the machine as little as possible.
