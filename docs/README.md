@@ -2,7 +2,7 @@
 
 This project's goal is to make a coffee machine responsive to different HTTP-Requests, like:
 
-**Request**
+**JSON-Request**
 ```json
 {
   "userID": "admin",
