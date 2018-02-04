@@ -20,6 +20,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 - brewing single and double espresso via HTTP-request
 - brewing single and double coffee via HTTP-request
 - starting the rinse program via HTTP-request (good for preheating the system)
+- chaining simple actions like in the example above
 - reading out machine status (e.g. water level, coffee bean depot, temperature, errors, ...)
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
