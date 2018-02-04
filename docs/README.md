@@ -1,7 +1,18 @@
 # RPiCoffee
 
-This project's goal is to enable a coffee machine being able to respond to different HTTP-Responses. 
+This project's goal is to make a coffee machine responsive to different HTTP-Requests, like:
 
+**Request**
+```json
+{
+  "userID": "admin",
+  "actions": [
+    "turn on",
+    "brew espresso"
+  ]
+}
+
+```
 'Cause nobody likes to wait for the machine.
 
 **Possible scenarios are:**
