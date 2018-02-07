@@ -35,11 +35,29 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [x] Soldering jumper wires to all of the frontpanel buttons
 
+[x] First Prototype for web app
+
 [ ] Rework on the wire management
 
 [ ] Solder the interface circuit
 
 [ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
+
+### UI stuff
+
+Some time ago I put together a simple UI-prototype for the planned web app that will be rendered by the raspberry. I used flaticons.com to find some nice icons (see credits below the images). As soon as the technical stuff is working, I will do a redesign with my own icons. Here are some impressions of the first iteration:
+
+![Image of splashscreen](images/UI-Prototype/Mobile_OFFLINE_splash.jpg)
+![Image of Offline Screen](images/UI-Prototype/Mobile_OFFLINE.jpg)
+![Image of cleaning Screen](images/UI-Prototype/Mobile_cleaning.jpg)
+
+**Credits for the nice icons:**
+
+Icon made by Freepik from www.flaticon.com (coffee cup)
+
+Icon made by Creaticca Creative Agency from www.flaticon.com (shower)
+
+Icon made by Smashicons from www.flaticon.com (pie chart, settings)
 
 ### Electromechanical stuff
 
