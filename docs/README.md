@@ -43,9 +43,13 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
 
-### UI stuff
+### Mobile / Responsive User Interface stuff
 
-Some time ago I put together a simple UI-prototype for the planned web app that will be rendered by the raspberry. I used flaticons.com to find some nice icons (see credits below the images). As soon as the technical stuff is working, I will do a redesign with my own icons. Here are some impressions of the first iteration:
+Some time ago I put together a simple UI-prototype for the planned web app that will be rendered by the raspberry. I want to create a responsive interface that can be used on mobile and desktop browsers. I will use the skeleton CSS-only-framework for the responsiveness to keep everything small and simple.
+
+I used flaticons.com to find some nice icons (see credits below the images). As soon as the technical stuff is working, I will do a redesign with my own icons and update everything to the state actually implemented.
+
+Here are some impressions of the first iteration:
 
 ![Image of splashscreen](images/UI-Prototype/Mobile_OFFLINE_splash.jpg)
 ![Image of Offline Screen](images/UI-Prototype/Mobile_OFFLINE.jpg)
