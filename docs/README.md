@@ -45,6 +45,8 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
 
+[ ] Checkout Mozilla-IoT Gateway: https://github.com/mozilla-iot/gateway/
+
 ### Mobile / Responsive User Interface stuff
 
 Some time ago I put together a simple UI-prototype for the planned web app. It will be rendered by a Flask Webserver on the raspberry. The interface should be responsive and useable on mobile and desktop browsers. I will use the skeleton CSS-only-framework for the responsiveness.
