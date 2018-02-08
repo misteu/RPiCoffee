@@ -43,7 +43,7 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Solder the interface circuit
 
-      [x] First prototype of the interface circuit
+[x] First prototype of the interface circuit
  
 [x] First espresso via webbrowser
 
@@ -74,11 +74,15 @@ Icon made by Smashicons from www.flaticon.com (pie chart, settings)
 
 First espresso via webbrowser! Sorry for the jumpy filming, was a little bit excited :-D
 
-![Flask to GPIO](images/Flask_to_espresso_2.gif)!
+![Flask to GPIO](images/Flask_to_espresso_2.gif)
 
 Testing GPIO Pins via Flask, the Raspberry Pi is in my local wlan:
 
-![Flask to GPIO](images/Flask_to_GPIO.gif)!
+![Flask to GPIO](images/Flask_to_GPIO.gif)
+
+Yesterday I got my order with optocouplers, transistors and other stuff. I made a litte circuit to drive two channels / switches via GPIO Pins. This first prototype has two channels, so it can control two buttons. For my tests I connected them to the power button and the espresso button. Maybe I will give my final PCB-design to some board manufacturer.
+![Optocoupler interface circuit](images/Optocoupler_circuit.jpg)
+
 
 First test of the hacked frontpanel via "hotwiring" the buttons:
 
