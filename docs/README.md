@@ -43,6 +43,10 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Solder the interface circuit
 
+      [x] First prototype of the interface circuit
+ 
+[x] First espresso via webbrowser
+
 [ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
 
 [ ] Checkout Mozilla-IoT Gateway: https://github.com/mozilla-iot/gateway/
@@ -56,8 +60,7 @@ I used flaticons.com to find some nice icons (see credits below the images). As 
 Here are some impressions of the first iteration:
 
 ![Image of splashscreen](images/UI-Prototype/Mobile_OFFLINE_splash.jpg)
-![Image of Offline Screen](images/UI-Prototype/Mobile_OFFLINE.jpg)
-![Image of cleaning Screen](images/UI-Prototype/Mobile_cleaning.jpg)
+![Image of Offline Screen](images/UI-Prototype/Mobile_ONLINE.jpg)
 
 **Credits for the nice icons:**
 
@@ -69,23 +72,36 @@ Icon made by Smashicons from www.flaticon.com (pie chart, settings)
 
 ### Electromechanical stuff
 
-The frontpanel looked very spacious at first, but there is a grid of plastic under the buttons giving minimal space for running the wires. This plastic construction is for transfering the mechanical force to the actual pushbuttons on the circuit and manages to transfer the light of the SMD-LEDs to the front. So if you really mess up, the buttons stop working, the LED's light will be blocked and the case of the frontpanel will not close anyway. You could cut the grid a little bit, but I wanted to modify the machine as little as possible.
+First espresso via webbrowser! Sorry for the jumpy filming, was a little bit excited :-D
 
-![Image of the openened frontpanel](images/frontpanel_unmodified_opened.JPG)
+![Flask to GPIO](images/Flask_to_espresso_2.gif)!
 
-First step is finished with soldering jumper cables to every switch. I planned to do the same with the LEDs for reading out the machine's status and errors but the SMD-LEDs are pretty small and my solder tip seemed to big for proper soldering. You can see them some of them (DL3 - DL5) in the first row of the circuit board.
+Testing GPIO Pins via Flask, the Raspberry Pi is in my local wlan:
+
+![Flask to GPIO](images/Flask_to_GPIO.gif)!
+
+First test of the hacked frontpanel via "hotwiring" the buttons:
+
+![Hotwiring the espresso button](images/hotwire1.gif)![Espresso out](images/hotwire2.gif)
+
+Here is the place where the Raspberry Pi and the interface circuit is planned to stay at. This looks like a safe place for electronics (you have to be aware of humidity) because the mainboard of the machine is placed there, too.
+![Image of the cables coming from the fron panel and the area for hacked stuff](images/cables_sideview_place_for_hacked_stuff.jpg)
+
+There is a hole for the original flat wire which is big enough for my hacked wires.
+![Image of the cable duct](images/kind_of_cable_duct.JPG)
 
 I will have to rework the running of the wires a little bit because right now the button press feels softer than before. Meaning, the wires are pressed down by the plastic grid, eventually causing damage to the isolation in the future.
 
 ![Image of modified frontpanel](images/frontpanel_modified.JPG)
 ![Image of modified frontpanel](images/frontpanel_modified_cablerunV1.JPG)
 
-There is a hole for the original flat wire which is big enough for my hacked wires.
-![Image of the cable duct](images/kind_of_cable_duct.JPG)
+![Image of the openened frontpanel](images/frontpanel_unmodified_opened.JPG)
 
-Here is the place where the Raspberry Pi and the interface circuit is planned to stay at. This looks like a safe place for electronics (you have to be aware of humidity) because the mainboard of the machine is placed there, too.
-![Image of the cables coming from the fron panel and the area for hacked stuff](images/cables_sideview_place_for_hacked_stuff.jpg)
+First step is finished with soldering jumper cables to every switch. I planned to do the same with the LEDs for reading out the machine's status and errors but the SMD-LEDs are pretty small and my solder tip seemed to big for proper soldering. You can see them some of them (DL3 - DL5) in the first row of the circuit board.
 
-First test of the hacked frontpanel via "hotwiring" the buttons:
+The frontpanel looked very spacious at first, but there is a grid of plastic under the buttons giving minimal space for running the wires. This plastic construction is for transfering the mechanical force to the actual pushbuttons on the circuit and manages to transfer the light of the SMD-LEDs to the front. So if you really mess up, the buttons stop working, the LED's light will be blocked and the case of the frontpanel will not close anyway. You could cut the grid a little bit, but I wanted to modify the machine as little as possible.
 
-![Hotwiring the espresso button](images/hotwire1.gif)![Espresso out](images/hotwire2.gif)
+
+
+
+
