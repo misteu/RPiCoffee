@@ -76,7 +76,7 @@ First espresso via webbrowser! Sorry for the jumpy filming, was a little bit exc
 
 ![Flask to GPIO](images/Flask_to_espresso_2.gif)
 
-Setting GPIO Pins via webbrowser with Flask. The Raspberry Pi and the laptop are in my local wlan:
+Setting GPIO Pins via webbrowser with Flask. The Raspberry Pi and the laptop are connected to my local wlan:
 
 ![Flask to GPIO](images/Flask_to_GPIO.gif)
 
