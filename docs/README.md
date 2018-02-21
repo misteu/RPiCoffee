@@ -39,7 +39,9 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [x] First Prototype for web app
 
-[ ] Rework on the wire management
+[x] Rework on the wire management
+
+[x] Design and order interface PCB
 
 [ ] Solder the interface circuit
 
