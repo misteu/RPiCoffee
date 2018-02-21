@@ -74,6 +74,16 @@ Icon made by Smashicons from www.flaticon.com (pie chart, settings)
 
 ### Electromechanical stuff
 
+Finally I designed the PCB of the interface circuit. Luckily oshpark has a good documentation for accepted PCB-files from different softwares, so I picked one of these softwares. After some youtube-videos I was able to design my PCB in KiCad.
+Despite of rearranging everything nicely there aren't any big changes to the prototyped circuit. In my final iteration of the PCB, I changed the resistors and transistors to SMD parts. Otherwise the cost for my order would have been doubled. Now it is 12$ for three PCBs
+
+![PCB front](https://644db4de3505c40a0444-327723bce298e3ff5813fb42baeefbaa.ssl.cf1.rackcdn.com/e6c1dce6e0ddad3996c43d0423b85ef9.png) 
+![PCB back](https://644db4de3505c40a0444-327723bce298e3ff5813fb42baeefbaa.ssl.cf1.rackcdn.com/60c5464e5ba7b7541d8b4de3c83317a2.png)
+
+I don't know if I am able to solder SMD parts with my big solder tip, maybe I will order some smaller ones.
+
+Also I got some meters of enamelled copper wire to replace the quite thick wires I soldered to the interface before.
+
 First espresso via webbrowser! Sorry for the jumpy filming, was a little bit excited :-D
 
 ![Flask to GPIO](images/Flask_to_espresso_2.gif)
@@ -82,7 +92,7 @@ Setting GPIO Pins via webbrowser with Flask. The Raspberry Pi and the laptop are
 
 ![Flask to GPIO](images/Flask_to_GPIO.gif)
 
-Yesterday I got my order with optocouplers, transistors and other stuff. I made a litte circuit to drive two channels / switches via GPIO Pins. This first prototype has two channels, so it can control two buttons. For my tests I connected them to the power button and the espresso button. Maybe I will give my final PCB-design to some board manufacturer.
+Yesterday I got my order of optocouplers, transistors and other stuff. I made a litte circuit to drive two channels / switches via GPIO Pins. So it can control two buttons. For my tests I connected them to the power button and the espresso button. The final layout will be produced by some PCB manufacturer.
 ![Optocoupler interface circuit](images/Optocoupler_circuit.jpg)
 
 
