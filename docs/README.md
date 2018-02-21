@@ -25,7 +25,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
-The easiest way is to hack the existing frontpanel with overriding its simple pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has wifi built in.
+The easiest way is to hack the existing frontpanel with overriding its simple pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
 
 I will stick to the Raspberry because it is cheap (around 12 Eur for the Zero W) and I do not have to make any hardware modifications to get it up and running. The Raspberry will be prepared with a minimal setup based on Raspbian Lite with everything unnecessary turned off. 
 
@@ -49,7 +49,7 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
 
-[ ] Checkout Mozilla-IoT Gateway: https://github.com/mozilla-iot/gateway/
+[x] Find a way to read out LEDs at the frontpanel
 
 ### Mobile / Responsive User Interface stuff
 
