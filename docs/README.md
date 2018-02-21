@@ -88,14 +88,15 @@ Also I got some meters of enamelled copper wire to replace the quite thick wires
 
 I used the 0.3mm one. Now there is nothing interfering with the buttons anymore and the diameter is smaller than the SMD parts on the circuit. Everything fine!
 
+The soldering looks a little bit messy because I like to use a lot of flux.
+![final frontpanel of Delonghi Ecam](images/copperWireSoldered.JPG)
+
 Now it looks much cleaner than before. I taped the wires to the original flat cable to enhance the sturdiness of the cable harness.
 ![soldered enamelled copper wire](images/frontpanel_copperWire.JPG)
 
 That is the actual side-view right now. I won some space because of the better cable management, but in general it looks like before.
 
 ![new cable management with soldered enamelled copper wires](images/cableManagement.JPG)
-
-![final frontpanel of Delonghi Ecam](images/copperWireSoldered.JPG)
 
 First espresso via webbrowser! Sorry for the jumpy filming, was a little bit excited :-D
 
