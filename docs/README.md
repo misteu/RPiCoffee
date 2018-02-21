@@ -25,7 +25,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
-## Progress
+## Progress / ToDo
 
 [x] Soldering jumper wires to all of the frontpanel buttons
 
@@ -36,6 +36,8 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 [x] Design and order interface PCB
 
 [ ] Solder the interface circuit
+
+[ ] Practice SMD soldering maybe order some SMD solder tips
 
 [x] First prototype of the interface circuit
  
