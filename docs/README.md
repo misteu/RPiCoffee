@@ -49,7 +49,7 @@ It will be powered by its own USB-power supply because I do not know how stable 
  
 [x] First espresso via webbrowser
 
-[ ] Checkout the positions of the relevant sensors (water, coffe grounds level) for direct access
+[ ] Checkout the positions of relevant sensors (water, coffe grounds level) for direct access
 
 [x] Find a way to read out LEDs at the frontpanel
 
