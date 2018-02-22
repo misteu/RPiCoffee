@@ -63,13 +63,14 @@ On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb da
 
 ### Mobile / Responsive User Interface stuff
 
-I finished redesigning the user-interface. I prototyped the complete thing in Sketch and transfered it to HTML and CSS with the help of Skeleton ([getskeleton.com]). All the hover interaction-stuff (except the settings menu) is finished.
+I made a rededign of the UI because I did not like this dark theme. I began prototyping the complete thing in Sketch and transfered it later to HTML and CSS with the help of Skeleton ([getskeleton.com]) and Sketch's CSS and SVG output-features. I picked a nice morning like gradient from [webgradients.com] and played around with colorsets from [coolors.co]. For the final touch I added these transparent triangle things for some foggy morning effects. They are technically stacked CSS3 clipping paths of div-elements I colored with #fff and alpha = 0.2 ;-)
+All the hover interaction-stuff (except the settings menu) and responsiveness is finished. You can see it here:
 
-This is a screenshot if it in fullsize:
 ![Image of new UI](images/UI_fullsize.png)
 
-This is a gif animation of the button effects and the responsive features:
 ![Image of new UI](images/UI_Responsive.gif)
+
+Everything was uploaded to my github-repo at the UI path.
 
 Some time ago I put together a simple UI-prototype for the planned web app. It will be rendered by a Flask Webserver on the raspberry. The interface should be responsive and useable on mobile and desktop browsers. I will use the skeleton CSS-only-framework for the responsiveness.
 
