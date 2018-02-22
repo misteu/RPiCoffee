@@ -294,7 +294,7 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
@@ -319,8 +319,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: rgba(81, 90, 71, 0.8);
-  border-color: rgba(81, 90, 71, 0.8); }
+  background-color: #515a47;
+  border-color: #515a47; }
 
 .button.button-primary:hover,
 button.button-primary:hover,
@@ -333,8 +333,56 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #515a47;
-  border-color: #515a47; }
+  background-color: #404838;
+  border-color: #404838; }
+
+/*Power Off Button (red)*/
+.button.button-powerOff,
+button.button-powerOff,
+input[type="submit"].button-powerOff,
+input[type="reset"].button-powerOff,
+input[type="button"].button-powerOff {
+  color: #FFF;
+  background-color: rgba(138, 73, 21, 0.9);
+  border-color: rgba(138, 73, 21, 0.9); }
+
+.button.button-powerOff:hover,
+button.button-powerOff:hover,
+input[type="submit"].button-powerOff:hover,
+input[type="reset"].button-powerOff:hover,
+input[type="button"].button-powerOff:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-powerOff:focus,
+input[type="reset"].button-powerOff:focus,
+input[type="button"].button-powerOff:focus {
+  color: #FFF;
+  background-color: #6E3A10;
+  border-color: #6E3A10; }
+
+/*Power On Button (green)*/
+.button.button-powerOn,
+button.button-powerOn,
+input[type="submit"].button-powerOn
+input[type="reset"].button-powerOn
+input[type="button"].button-powerOn {
+  color: #FFF;
+  background-color: #7b9b7e;
+  border-color: #7b9b7e; }
+
+.button.button-powerOn:hover,
+button.button-powerOn:hover,
+input[type="submit"].button-powerOn:hover,
+input[type="reset"].button-powerOn:hover,
+input[type="button"].button-powerOn:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-powerOn:focus,
+input[type="reset"].button-powerOn:focus,
+input[type="button"].button-powerOn:focus {
+  color: #FFF;
+  background-color: #627C64;
+  border-color: #627C64; }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

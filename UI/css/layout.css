@@ -3,7 +3,8 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  margin-top: 1%; }
+  margin-top: 1%;
+  margin-bottom: 5%; }
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
