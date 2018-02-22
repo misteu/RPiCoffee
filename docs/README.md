@@ -67,7 +67,7 @@ I made a rededign of the UI because I did not like the dark theme (see below). I
 
 I picked a nice morning like gradient from [webgradients.com](http://webgradients.com) and played around with colorsets from [coolors.co]. For the final touch I added these transparent triangle things for some foggy morning effects. They are technically stacked CSS3 clipping paths of div-elements I colored with #fff and alpha = 0.2 ;-)
 
-All the hover interaction-stuff (except the settings menu) and responsiveness is finished. You can see it here:
+All the hover interaction-stuff and responsiveness is finished. Everything else (settings, stats and cryptomining😅) will be added iteratively as soon as main functionalities are up and running.
 
 ![Image of new UI](images/UI_fullsize.png)
 
