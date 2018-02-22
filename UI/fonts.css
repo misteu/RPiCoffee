@@ -1,0 +1,13 @@
+/* fonts definitions */
+
+$typeFamilyLight: Lato-Thin, sans-serif;
+
+ @font-face {
+  font-family: "Lato-Thin";
+  src: url(../fonts/lato/Lato-Thin.ttf) format("truetype");
+}
+
+
+body {
+	font-family: $typeFamilyLight;
+}

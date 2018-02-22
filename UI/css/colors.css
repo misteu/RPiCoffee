@@ -1,0 +1,13 @@
+/* color definitions */
+/* Background Main */
+.bodyContainer {
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); }
+
+.bgMainTriangle1, .bgMainTriangle2, .bgMainTriangle3, .bgMainTriangle4 {
+  background: rgba(255, 255, 255, 0.1); }
+
+.bgMainMiddle {
+  background: rgba(255, 255, 255, 0.2); }
+
+.goodMorning, .titleFont {
+  color: #535949; }

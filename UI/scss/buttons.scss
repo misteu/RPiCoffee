@@ -1,0 +1,44 @@
+@import 'colors';
+
+/* Button definitions */
+$height1Button: 100%;
+$height2Button: 120px;
+
+.x1Button {
+	height: $height1Button;
+}
+
+.x2Button {
+	height: $height2Button;
+}
+
+.x1x1Button {
+	height: $height1Button;
+	width: 45%;
+}
+
+.flexButtonsContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flexButton {
+	flex-direction: row;
+}
+
+.buttonIconAligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.buttonIcon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.buttonColorGray {
+	background: $colorButtonGray;
+}

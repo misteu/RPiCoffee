@@ -1,0 +1,31 @@
+/* color definitions */
+
+$colorGradientSunset: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+$colorButtonGray: rgba(81,90,71,0.80);
+$colorButtonGrayHover: rgba(81,90,71,1);
+$colorButtonRed: #8A4915;
+$colorButtonGreen: #7B9B7E;
+
+/* Background Main */
+$colorWhiteLight: rgba(255,255,255,0.20);
+$colorWhiteLighter: rgba(255,255,255,0.10);
+
+$colorFont: #535949;
+
+
+.bodyContainer {
+	background-image: $colorGradientSunset;
+}
+
+
+.bgMainTriangle1, .bgMainTriangle2, .bgMainTriangle3, .bgMainTriangle4 {
+	background: $colorWhiteLighter;
+}
+
+.bgMainMiddle {
+	background: $colorWhiteLight;
+}
+
+.goodMorning, .titleFont {
+	color: $colorFont;
+}

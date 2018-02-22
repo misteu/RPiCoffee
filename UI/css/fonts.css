@@ -1,0 +1,13 @@
+/* fonts definitions */
+.goodMorning {
+  /* Guten Morgen, */
+  font-size: 48px; }
+
+.titleFont {
+  font-size: 18px; }
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url(../fonts/lato/Lato-Thin.ttf) format("truetype"); }
+body {
+  font-family: Lato-Thin, sans-serif; }

@@ -1,0 +1,45 @@
+/* color definitions */
+/* Background Main */
+.bodyContainer {
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); }
+
+.bgMainTriangle1, .bgMainTriangle2, .bgMainTriangle3, .bgMainTriangle4 {
+  background: rgba(255, 255, 255, 0.1); }
+
+.bgMainMiddle {
+  background: rgba(255, 255, 255, 0.2); }
+
+.goodMorning, .titleFont {
+  color: #535949; }
+
+/* Button definitions */
+.x1Button {
+  height: 100%; }
+
+.x2Button {
+  height: 120px; }
+
+.x1x1Button {
+  height: 100%;
+  width: 45%; }
+
+.flexButtonsContainer {
+  display: flex;
+  justify-content: space-between; }
+
+.flexButton {
+  flex-direction: row; }
+
+.buttonIconAligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem; }
+
+.buttonIcon {
+  max-width: 100%;
+  max-height: 100%; }
+
+.buttonColorGray {
+  background: rgba(81, 90, 71, 0.8); }
