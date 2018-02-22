@@ -25,15 +25,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
-The easiest way is to hack the existing frontpanel with overriding its simple pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
-
-I will stick to the Raspberry because it is cheap (around 12 Eur for the Zero W) and I do not have to make any hardware modifications to get it up and running. The Raspberry will be prepared with a minimal setup based on Raspbian Lite with everything unnecessary turned off. 
-
-Here isdescribed in this article: [https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html](https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html)
-
-It will be powered by its own USB-power supply because I do not know how stable the coffee machines DC rails are and do not have the equipment for measurements. If everything works fine I will parallel the 230V rails of the coffee machine and the Raspberry's power supply.
-
-## Progress
+## Progress / ToDo
 
 [x] Soldering jumper wires to all of the frontpanel buttons
 
@@ -45,6 +37,8 @@ It will be powered by its own USB-power supply because I do not know how stable 
 
 [ ] Solder the interface circuit
 
+[ ] Practice SMD soldering maybe order some SMD solder tips
+
 [x] First prototype of the interface circuit
  
 [x] First espresso via webbrowser
@@ -52,6 +46,18 @@ It will be powered by its own USB-power supply because I do not know how stable 
 [ ] Checkout the positions of relevant sensors (water, coffe grounds level) for direct access
 
 [x] Find a way to read out LEDs at the frontpanel
+
+### Intro ###
+The easiest way is to hack the existing frontpanel via overriding its pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
+
+I will stick to the Raspberry because it is cheap (around 12 Eur for the Zero W) and I do not have to make any hardware modifications to get it up and running. The Raspberry will be prepared with a minimal setup based on Raspbian Lite with everything unnecessary turned off. 
+
+It's described in this article: [https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html](https://www.heise.de/ct/ausgabe/2017-22-Digitales-Flugblatt-Raspberry-Pi-mit-Batterie-als-anonymer-WLAN-Hotspot-und-Webserver-3851689.html)
+
+The RPi will be powered by its own USB-power supply because I do not know how stable the coffee machines DC rails. Maybe later I will parallel the 230V rails of the coffee machine to the Raspberry's AC power supply.
+
+On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb database for some data collecting.
+
 
 ### Mobile / Responsive User Interface stuff
 
