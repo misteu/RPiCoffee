@@ -63,7 +63,7 @@ On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb da
 
 ### Mobile / Responsive User Interface stuff
 
-I made a rededign of the UI because I did not like the dark theme (see below). I began prototyping the complete thing in Sketch and transfered it later to HTML and CSS with the help of Skeleton ([getskeleton.com]) and Sketch's CSS and SVG output-features. I picked a nice morning like gradient from [webgradients.com] and played around with colorsets from [coolors.co]. For the final touch I added these transparent triangle things for some foggy morning effects. They are technically stacked CSS3 clipping paths of div-elements I colored with #fff and alpha = 0.2 ;-)
+I made a rededign of the UI because I did not like the dark theme (see below). I began prototyping the complete thing in Sketch and transfered it later to HTML and CSS with the help of Skeleton ([getskeleton.com](http://www.getskeleton.com)) and Sketch's CSS and SVG output-features. I picked a nice morning like gradient from [webgradients.com](http://webgradients.com) and played around with colorsets from [coolors.co]. For the final touch I added these transparent triangle things for some foggy morning effects. They are technically stacked CSS3 clipping paths of div-elements I colored with #fff and alpha = 0.2 ;-)
 All the hover interaction-stuff (except the settings menu) and responsiveness is finished. You can see it here:
 
 ![Image of new UI](images/UI_fullsize.png)
