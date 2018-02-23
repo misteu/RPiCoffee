@@ -1,9 +1,25 @@
 /* fonts definitions */
-.goodMorning {
-  /* Guten Morgen, */
-  font-size: 48px;
-  text-align: center; }
+.icon {
+  display: none;
+  font-size: 48px; }
 
+.goodMorning h1 {
+  /* Guten Morgen, */
+  text-align: left;
+  margin-bottom: -48px; }
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .goodMorning h1 {
+    /* Guten Morgen, */
+    margin-bottom: 0px; } }
+/* For devices larger than 1000px */
+@media (min-width: 1000px) {
+  .icon {
+    display: inline; }
+
+  .goodMorning h1 {
+    text-align: center; } }
 .titleFont {
   font-size: 18px; }
 
