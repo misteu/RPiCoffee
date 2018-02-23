@@ -19,7 +19,47 @@
 .goodMorning, .titleFont {
   color: #535949; }
 
+/* fonts definitions */
+.icon {
+  display: none;
+  font-size: 48px; }
+
+.goodMorning h1 {
+  /* Guten Morgen, */
+  text-align: left;
+  margin-bottom: -48px; }
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .goodMorning h1 {
+    /* Guten Morgen, */
+    margin-bottom: 0px; } }
+/* For devices larger than 1000px */
+@media (min-width: 1000px) {
+  .icon {
+    display: inline; }
+
+  .goodMorning h1 {
+    text-align: center; } }
+.titleFont {
+  font-size: 18px; }
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url(../fonts/lato/Lato-Thin.ttf) format("truetype"); }
+body {
+  font-family: Lato-Thin, sans-serif; }
+
 /* Button definitions */
+.buttonText {
+  position: absolute;
+  font-family: Lato-Thin, sans-serif;
+  transform: translateY(10px);
+  color: #D7BE82;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 500; }
+
 .x1Button {
   height: 100%; }
 

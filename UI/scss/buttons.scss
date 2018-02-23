@@ -1,8 +1,19 @@
 @import 'colors';
+@import 'fonts';
 
 /* Button definitions */
 $height1Button: 100%;
 $height2Button: 100px;
+
+.buttonText {
+	position: absolute;
+	font-family: $typeFamilyLight;
+	transform: translateY(10px);
+	color: $colorButtonContent;
+	opacity: 0.8;
+	font-size: 18px;
+  	font-weight: 500;
+}
 
 .x1Button {
 	height: $height1Button;
