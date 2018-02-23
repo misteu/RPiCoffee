@@ -28,7 +28,7 @@ own imports
 */
 /* color definitions */
 /* Background Main */
-.bodyContainer {
+.mainCard, .bodyContainer {
   background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); }
 
 .bgMainTriangle1, .bgMainTriangle2, .bgMainTriangle3, .bgMainTriangle4 {
