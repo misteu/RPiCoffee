@@ -2,11 +2,13 @@
 
 
 .titleFont {
+	position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   margin-top: 1%;
   margin-bottom: 5%;
+  z-index: 200;
 }
 
 /* For devices larger than 400px */
@@ -48,6 +50,8 @@
 	top: 0px;
 	left: 0px;
 	right: 0px;
+	height: 100%;
+	bottom:0px;
 	
 }
 
@@ -55,11 +59,13 @@
 @media (min-width: 550px) {
 
 	.bodyContainer{
-		bottom:0px;
+		bottom:0;
+		margin-bottom: 0;
 	}
 }
 
 .bgMainMiddle {
+	position: relative;
 	margin: 0px 0px 0px 0px;
 	padding-bottom: 4.0rem;
 }
