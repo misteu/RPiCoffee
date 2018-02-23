@@ -18,7 +18,7 @@ $colorWhiteLighter: rgba(255,255,255,0.10);
 $colorFont: #535949;
 
 
-.bodyContainer {
+.mainCard, .bodyContainer {
 	background-image: $colorGradientSunset;
 	position: fixed;
 }
