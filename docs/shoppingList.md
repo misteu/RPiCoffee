@@ -1,8 +1,6 @@
 ### Raspberry and power supply
-1x Raspberry Pi Zero W
-
-1x
-NT MUSB 2 WS
+1x Raspberry Pi Zero W 13,50€ (inkl. Versand, von pimoroni)
+1x NT MUSB 2 WS
 USB-Ladegerät, 5 V, 2000 mA, Micro-USB
 6,00 €
 
