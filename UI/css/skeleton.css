@@ -43,7 +43,8 @@ own imports
 /* fonts definitions */
 .goodMorning {
   /* Guten Morgen, */
-  font-size: 48px; }
+  font-size: 48px;
+  text-align: center; }
 
 .titleFont {
   font-size: 18px; }
