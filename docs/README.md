@@ -47,6 +47,8 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 
 [x] Find a way to read out LEDs at the frontpanel
 
+[X] Redesign User-interface
+
 ### Intro ###
 The easiest way is to hack the existing frontpanel via overriding its pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
 
@@ -61,6 +63,23 @@ On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb da
 
 ### Mobile / Responsive User Interface stuff
 
+
+#### Second iteration: WebApp-UI
+I made a rededign of the UI because I did not like the dark theme (see below). I began prototyping the complete thing in Sketch and transfered it later to HTML and CSS with the help of Skeleton ([getskeleton.com](http://www.getskeleton.com)) and Sketch's CSS and SVG output-features. 
+
+I picked a nice morning like gradient from [webgradients.com](http://webgradients.com) and played around with colorsets from [coolors.co]. For the final touch I added these transparent triangle things for some foggy morning effects. They are technically stacked CSS3 clipping paths of div-elements I colored with #fff and alpha = 0.2 ;-)
+
+The icons are this time from Google's material design icon-font ([https://material.io/icons/](https://material.io/icons/)) I found them via the awesome iconfont plugin for Sketch by Kerem Sevencan ([https://github.com/keremciu](https://github.com/keremciu))
+
+All the hover interaction-stuff and responsiveness is finished. Everything else (settings, stats and cryptomining😅) will be added iteratively as soon as main functionalities are up and running.
+
+![Image of new UI](images/UI_fullsize.png)
+
+![Image of new UI](images/UI_Responsive.gif)
+
+Everything was uploaded to my github-repo at the UI path.
+
+#### First iteration: WebApp-UI
 Some time ago I put together a simple UI-prototype for the planned web app. It will be rendered by a Flask Webserver on the raspberry. The interface should be responsive and useable on mobile and desktop browsers. I will use the skeleton CSS-only-framework for the responsiveness.
 
 I used flaticons.com to find some nice icons (see credits below the images). As soon as the technical stuff is working, I will do a redesign with my own icons and update everything to the state actually implemented.
@@ -72,11 +91,11 @@ Here are some impressions of the first iteration:
 
 **Credits for the nice icons:**
 
-Icon made by Freepik from www.flaticon.com (coffee cup)
+Icon made by Freepik from [www.flaticon.com] (coffee cup)
 
-Icon made by Creaticca Creative Agency from www.flaticon.com (shower)
+Icon made by Creaticca Creative Agency from [www.flaticon.com] (shower)
 
-Icon made by Smashicons from www.flaticon.com (pie chart, settings)
+Icon made by Smashicons from [www.flaticon.com] (pie chart, settings)
 
 ### Electromechanical stuff
 
