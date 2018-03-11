@@ -1,0 +1,89 @@
+/* color definitions */
+/* Background Main */
+.mainCard, .bodyContainer {
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); }
+
+.bgMainTriangle1, .bgMainTriangle2, .bgMainTriangle3, .bgMainTriangle4 {
+  background: rgba(255, 255, 255, 0.1); }
+
+.bgMiddle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+.goodMorning, .titleFont {
+  color: #535949; }
+
+/* fonts definitions */
+.icon {
+  display: none;
+  font-size: 48px; }
+
+.goodMorning h1 {
+  /* Guten Morgen, */
+  text-align: left;
+  margin-bottom: -48px; }
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .goodMorning h1 {
+    /* Guten Morgen, */
+    margin-bottom: 0px; } }
+/* For devices larger than 1000px */
+@media (min-width: 1000px) {
+  .icon {
+    display: inline; }
+
+  .goodMorning h1 {
+    text-align: center; } }
+.titleFont {
+  font-size: 18px; }
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url(../fonts/lato/Lato-Thin.ttf) format("truetype"); }
+body {
+  font-family: Lato-Thin, sans-serif; }
+
+/* Button definitions */
+.buttonText {
+  position: absolute;
+  font-family: Lato-Thin, sans-serif;
+  transform: translateY(10px);
+  color: #D7BE82;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 500; }
+
+.x1Button {
+  height: 100%; }
+
+.x2Button {
+  height: 100px; }
+
+.x1x1Button {
+  height: 100%;
+  width: 45%; }
+
+.flexButtonsContainer {
+  display: flex;
+  justify-content: space-between; }
+
+.flexButton {
+  flex-direction: row; }
+
+.buttonIconAligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem; }
+
+.buttonIcon {
+  max-width: 100%;
+  max-height: 100%; }

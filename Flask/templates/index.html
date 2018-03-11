@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>espresso x rpi</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="bodyContainer">
+</div>
+  <div class="titleFont">
+    <span>espresso x rpi</span>
+  </div>
+  <div class="mainCard">
+    <div class="triangles">
+      <div class="bgMainTriangle1">
+      </div>
+      <div class="bgMainTriangle2">
+      </div>
+
+    </div>
+
+    <div class="bgMainMiddle">
+    <div class="bgMiddle"></div>
+      <div class="container">
+
+            <div class="row">
+              <div class="one column">
+                <span>&nbsp; <!-- Whitespace --></span>
+              </div>
+              <div class="ten columns">
+                <div class="goodMorning"> <h1><span class="icon">🥖 </span>Guten Morgen!<span class="icon"> 🍳</span></h1></div>
+              </div>
+              <div class="one column">
+                <span>&nbsp; <!-- Whitespace --></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="one column">
+                <span>&nbsp; <!-- Whitespace --></span>
+              </div>
+              <div class="four columns">
+                <div class="button button-primary buttonIconAligner x2Button" onclick="enable('espressoX1')">
+                  <img src="{{url_for('static', filename='images/icons/espresso/4x2.svg')}}">
+                  <span class="buttonText">espresso</span>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="button button-primary buttonIconAligner x2Button" onclick="enable('espressoX2')">
+                 <img src="{{url_for('static', filename='images/icons/doubleespresso/2x2.svg')}}">
+                 <span class="buttonText">espresso</span>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="button button-primary buttonIconAligner x2Button" onclick="enable('coffeeX1')">
+                  <img src="{{url_for('static', filename='images/icons/coffee/2x2.svg')}}">
+                  <span class="buttonText">kaffee</span>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="button button-primary buttonIconAligner x2Button" onclick="enable('coffeeX2')">
+                  <img src="{{url_for('static', filename='images/icons/doublecoffee/2x2.svg')}}">
+                  <span class="buttonText">kaffee</span>
+                </div>
+              </div>
+              <div class="one column">
+                <span>&nbsp; <!-- Whitespace --></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="one column">
+                <span>&nbsp; <!-- Whitespace --></span>
+              </div>
+              <div class="four columns">
+                <div class="button buttonIconAligner x1Button button-powerOn" onclick="enable('onOff')">
+                  <img src="{{url_for('static', filename='images/icons/power/1x1.svg')}}">
+                </div>
+              </div> 
+              <div class="two columns">
+                <div class="button button-primary buttonIconAligner x1Button" onclick="enable('clean')">
+                  <img src="{{url_for('static', filename='images/icons/clean/1x1.svg')}}">
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="button button-primary buttonIconAligner x1Button" onclick="showComingSoon()">
+                  <img src="{{url_for('static', filename='images/icons/settings/1x1.svg')}}">
+                </div>
+              </div>
+              <div class="two columns flexButtonsContainer">
+                <div class="button button-primary buttonIconAligner x1x1Button flexButton" onclick="showComingSoon()">
+                  <img src="{{url_for('static', filename='images/icons/stats/1x1.svg')}}">
+                </div>
+                <div class="button button-primary buttonIconAligner x1x1Button flexButton" onclick="showComingSoon()">
+                  <img src="{{url_for('static', filename='images/icons/bitcoin/1x1.svg')}}">
+                </div>
+              </div>
+              <div class="one column">
+                <span>&nbsp; <!-- Whitespace --></span>
+              </div>
+            </div>
+          </div>
+      </div>
+    <div class="triangles">
+      <div class="bgMainTriangle3">
+      </div>
+      <div class="bgMainTriangle4">
+      </div>
+    </div>
+  </div>
+
+  <script>
+function showComingSoon() {
+    alert("Gibt's noch nicht, aber locker demnächst. 👌 👨‍💻");
+}
+
+function enable(action) {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+    }
+  };
+  xhttp.open("POST", "http://espresso:80/", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("action="+action);
+
+}
+
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
