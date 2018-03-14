@@ -8,6 +8,16 @@
   margin-bottom: 5%;
   z-index: 200; }
 
+.minerinfo {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #7b9b7e; }
+
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .titleFont {
@@ -84,3 +94,5 @@
 .bgMainTriangle4 {
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
   clip-path: polygon(0 0, 0 100%, 100% 0); }
+
+/*# sourceMappingURL=layout.css.map */

@@ -1,9 +1,11 @@
 from time import sleep, gmtime, strftime
 from flask import Flask, request, jsonify, url_for, send_from_directory, send_file, render_template
+import requests
+from subprocess import check_output
 
 # Define IP and port for Flask-server
 HOST = '0.0.0.0'
-PORT = 8000
+PORT = 80
 
 rpiMode = bool(True)
 
@@ -34,7 +36,7 @@ if rpiMode:
 
 	# Run clean program: gray wires
 	outputs["clean"] = LED(11)
-	message["clean"] = "Saeuberungsprogramm gestartet!"
+	message["clean"] = "Saeuberung gestartet!"
 
 	# Double coffee: green wires
 	outputs["coffeeX2"] = LED(12)
@@ -55,7 +57,51 @@ app = Flask(__name__)
 @app.route("/", methods=['GET'])
 def renderUi():
 
-	return render_template('index.html')
+	## request Mining stats
+	try:
+		request.args['minerInfos']
+		if request.args['minerInfos'] == "show":
+			r = requests.get('https://xmg.suprnova.cc/index.php?page=api&action=getuserstatus&api_key=42c6d4df6c897e7bc0fc33e0f8315ad3c7775aa5f701e4d5d9ef0eb823547b99&id=201792128')
+			validShares = r.json()['getuserstatus']['data']['shares']['valid']
+			hashrate = r.json()['getuserstatus']['data']['hashrate']
+			sharerate = r.json()['getuserstatus']['data']['sharerate']
+			status = check_output(['tail', '-1', '../miner.out'])
+
+			rBalance = requests.get('https://xmg.suprnova.cc/index.php?page=api&action=getuserbalance&api_key=42c6d4df6c897e7bc0fc33e0f8315ad3c7775aa5f701e4d5d9ef0eb823547b99&id=201792128')
+			balanceConf = rBalance.json()['getuserbalance']['data']['confirmed']
+			balanceUnconf = rBalance.json()['getuserbalance']['data']['unconfirmed']
+
+
+			r2 = requests.get('https://api.coinmarketcap.com/v1/ticker/magi/?convert=EUR')
+			price_eur = r2.json()[0]['price_eur']
+
+			balanceConfEUR = float(balanceConf) * float(price_eur)
+			balanceUnconfEUR = float(balanceUnconf) * float(price_eur)
+
+			## Kontostand Exponentialformat in Dezimal umwandeln
+			balanceConf = '{0:.6f}'.format(balanceConf)
+			balanceUnconf = '{0:.6f}'.format(balanceUnconf)
+			balanceConfEUR = '{0:.6f}'.format(balanceConfEUR)
+			balanceUnconfEUR = '{0:.6f}'.format(balanceUnconfEUR)
+
+			print(validShares, hashrate, sharerate, status, balanceConf, balanceUnconf)
+			display = "block"
+	except:
+
+		hashrate = 0
+		status = ""
+		price_usd = 0
+		display = "none"
+		balanceConf = 0
+		balanceUnconf = 0
+		balanceConfEUR = 0
+		balanceUnconfEUR = 0
+		price_eur = 0
+
+	# Strompreis bei Strommanufaktur
+	arbeitspreis = 25.67
+	strompreisRPiTagEUR = str(1.04*24*0.001*arbeitspreis*0.01)
+	return render_template('index.html', hashrate=hashrate, status=status, price_eur=price_eur, display=display, balanceConf=balanceConf, balanceUnconf=balanceUnconf, balanceConfEUR=balanceConfEUR, balanceUnconfEUR=balanceUnconfEUR, strompreisRPiTagEUR=strompreisRPiTagEUR, arbeitspreis=arbeitspreis)
 
 @app.route("/", methods=['POST'])
 def controlMachine():

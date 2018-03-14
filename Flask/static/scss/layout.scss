@@ -11,6 +11,17 @@
   z-index: 200;
 }
 
+.minerinfo {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(123,155,126,1)
+}
+
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .titleFont {
