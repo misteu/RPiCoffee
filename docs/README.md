@@ -19,7 +19,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 
 **UPDATE**
 
-In fact, there is no JSON parsing going on in the actual implementation. I created two dictionaries with self explaining keys, one for the action and one for a status message.
+In fact, there is no JSON parsing (like the example above implies) going on in the actual implementation. I created two dictionaries with self explaining keys, one for the action and one for a status message. The dictionary helps to abstract the GPIO pins to their actual functions (like brewing espresso) and make the code more readable.
 
 The value of each item is the related to a GPIO Pin. The RPi Zero's GPIO Pins are accessible via the LED()-function of the Python-module gpiozero. Each pin can be enabled and disabled via the LED(x).on() and LED(x).off().
 
@@ -70,6 +70,12 @@ def controlMachine():
 
 ## Progress / ToDo
 
+[ ] Checkout the positions of relevant sensors (water, coffe grounds level) for feedback
+
+[ ] Implement mongoDB for statistics, settings, etc.
+
+[x] Mining crypto currencies with the RPi and display the miner's status inside the WebApp
+
 [x] Soldering jumper wires to all of the frontpanel buttons
 
 [x] First Prototype for web app
@@ -78,15 +84,13 @@ def controlMachine():
 
 [x] Design and order interface PCB
 
-[ ] Solder the interface circuit
+[X] Solder the interface circuit
 
-[ ] Practice SMD soldering maybe order some SMD solder tips
+[X] Practice SMD soldering maybe order some SMD solder tips
 
 [x] First prototype of the interface circuit
  
 [x] First espresso via webbrowser
-
-[ ] Checkout the positions of relevant sensors (water, coffe grounds level) for direct access
 
 [x] Find a way to read out LEDs at the frontpanel
 
@@ -124,8 +128,8 @@ Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice
 
 ![picture of mining information](images/mining_infos.png)
 
-#### WebApp-UI combined to the hardware
-I combined my html+skeleton prototype with some Flask and GPIO test scripts. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
+#### WebApp-UI talking to the hardware
+I combined my html+skeleton prototype with some Flask and the LED() function of the Python module gpiozero. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
 
 ![animation of brewing espresso via Web App](images/webAppEspresso.gif)
 
@@ -150,6 +154,14 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 Everything was uploaded to my github-repo at the UI path.
 
 ### Electromechanical stuff
+
+One of the big next goals is to get feedback of the hardware. It would be very helpful to see if the machine is running or shut down. You could check and hear it from distance by pressing the clean button and press it again to stop the machine from pumping water. Obviously that is not very convenient.
+
+Also if the water level is too low or the coffee grounds box is full, the machine would not react to any input but turning off. But like in the first example, the user is not informed by that.
+
+One way to get feedback is to grab the LEDs' signals and convert them to the 3,3V level of the RPi. I already soldered enamelled copper wires to some testpoints of the front-panel PCB and made some experiments. Unfortunately the signals are not as easy to distinguish as expected. My last try was to read the voltage drops via the A/D converter of an attiny. That looked promising at first but did not work as reliable as needed. I think it has something to do with the LEDs' PWM control. Therefore the signal has to be filtered somehow. That could be done inside the attiny or the RPi.
+
+Another approach (that might be easier and probably does not need any filtering) is to directly grab the sensors signals, like the water-level sensor below the watercontainer.
 
 Everything is fitting quite nice into the spacious area next to the original electronics. I reused the original cable managment to run the power cord for the USB power-supply powering the Raspberry Pi.
 
