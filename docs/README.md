@@ -32,6 +32,10 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 
 [ ] Implement mongoDB for statistics, settings, etc.
 
+[ ] Changing the HTTP-Requests to a RESTful way of interaction --> would be nice for further developments like retrieving statistics!
+
+[ ] Document the API via Swagger / OpenAPI
+
 [x] Mining crypto currencies with the RPi and display the miner's status inside the WebApp
 
 [x] Soldering jumper wires to all of the frontpanel buttons
