@@ -73,7 +73,7 @@ The icons are this time from Google's material design icon-font ([https://materi
 
 All the hover interaction-stuff and responsiveness is finished. Everything else (settings, stats and cryptomining😅) will be added iteratively as soon as main functionalities are up and running.
 
-![Image of new UI](images/UI_fullsize.png)
+![Image of new UI](images/UI_fullsize.jpg)
 
 ![Image of new UI](images/UI_Responsive.gif)
 
