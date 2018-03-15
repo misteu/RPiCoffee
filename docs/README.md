@@ -15,6 +15,47 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 ```
 'Cause nobody likes to wait for the machine.
 
+
+++UPDATE++
+In fact, there is no JSON parsing going on in the actual implementation. I created two dictionaries with self explaining keys, one for the action and one for a status message.
+
+For example:
+
+```
+	# Turn machine on/off: blue wires
+	outputs["onOff"] = LED(26)
+	message["onOff"] = "Maschine faehrt hoch oder runter!"
+
+	# Single espresso: white wires
+	outputs["espressoX1"] = LED(19)
+	message["espressoX1"] = "Einfacher Espresso im Bau!"
+```
+
+The value of each item is the related to a GPIO Pin. Each pin can be enabled and disabled via the LED function of the gpiozero module. 
+
+In concluson, transferring an HTML-button press via Flask to a button on the coffee-machine is as simple as:
+
+```
+@app.route("/", methods=['POST'])
+def controlMachine():
+
+	# possible actions = dictionary-keys
+
+	action = request.form['action']
+	print("Action: {}".format(action))
+
+	# press button
+	outputs[str(action)].on()
+
+	# hold button for 500ms
+	sleep(0.2)
+
+	# release button
+	outputs[str(action)].off()
+
+	return str(message[str(action)])
+```
+
 **Possible scenarios are:**
 - turn on and shutting down the machine via HTTP-request
 - brewing single and double espresso via HTTP-request
