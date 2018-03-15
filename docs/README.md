@@ -16,10 +16,14 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 'Cause nobody likes to wait for the machine.
 
 
-++UPDATE++
+
+**UPDATE**
+
 In fact, there is no JSON parsing going on in the actual implementation. I created two dictionaries with self explaining keys, one for the action and one for a status message.
 
-For example:
+The value of each item is the related to a GPIO Pin. The RPi Zero's GPIO Pins are accessible via the LED()-function of the Python-module gpiozero. Each pin can be enabled and disabled via the LED(x).on() and LED(x).off().
+
+My dictionaries look like this:
 
 ```
 	# Turn machine on/off: blue wires
@@ -30,8 +34,6 @@ For example:
 	outputs["espressoX1"] = LED(19)
 	message["espressoX1"] = "Einfacher Espresso im Bau!"
 ```
-
-The value of each item is the related to a GPIO Pin. Each pin can be enabled and disabled via the LED function of the gpiozero module. 
 
 In concluson, transferring an HTML-button press via Flask to a button on the coffee-machine is as simple as:
 
@@ -47,7 +49,7 @@ def controlMachine():
 	# press button
 	outputs[str(action)].on()
 
-	# hold button for 500ms
+	# hold button for 200ms
 	sleep(0.2)
 
 	# release button
