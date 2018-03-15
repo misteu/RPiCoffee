@@ -96,13 +96,13 @@ Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice
 
 ![picture of mining information](images/mining_infos.png)
 
-I combined my html+skeleton prototype with some Flask and GPIO test scripts. Here you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because it is never used.
+I combined my html+skeleton prototype with some Flask and GPIO test scripts. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because it is generally never used.
+
+![animation of brewing espresso via Web App](images/webAppEspresso.gif)
 
 The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
 
 I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
-
-![animation of brewing espresso via Web App](images/webAppEspresso.gif)
 
 
 Everything is fitting quite nice into the spacious area next to the original electronics. I reused the original cable managment to run the power cord for the USB power-supply powering the Raspberry Pi.
