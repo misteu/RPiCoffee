@@ -96,7 +96,7 @@ Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice
 
 ![picture of mining information](images/mining_infos.png)
 
-I combined my html+skeleton prototype with some Flask and GPIO test scripts. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because it is generally never used.
+I combined my html+skeleton prototype with some Flask and GPIO test scripts. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
 
 ![animation of brewing espresso via Web App](images/webAppEspresso.gif)
 
