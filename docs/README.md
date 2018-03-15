@@ -63,6 +63,31 @@ On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb da
 
 ### Mobile / Responsive User Interface stuff
 
+#### My coffee machine is able to mine crypto currencies (in a very unprofitable way)
+The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
+
+It is running 24/7 via nohup.
+
+If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the last line of my miners console output is read. Everything is shown in some kind of output display.
+
+I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
+
+Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
+In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
+
+Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
+
+![picture of mining information](images/mining_infos.png)
+
+#### WebApp-UI combined to the hardware
+I combined my html+skeleton prototype with some Flask and GPIO test scripts. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
+
+![animation of brewing espresso via Web App](images/webAppEspresso.gif)
+
+The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
+
+I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
+
 
 #### Second iteration: WebApp-UI
 I made a redesign of the UI because I did not like the dark theme (see below). I began prototyping the complete thing in Sketch and transfered it later to HTML and CSS with the help of Skeleton ([getskeleton.com](http://www.getskeleton.com)) and Sketch's CSS and SVG output-features. 
@@ -80,30 +105,6 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 Everything was uploaded to my github-repo at the UI path.
 
 ### Electromechanical stuff
-
-The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
-
-It is running 24/7 via nohup.
-
-If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the last line of my miners console output is read. Everything is shown in some kind of output display.
-
-I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
-
-Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
-In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
-
-Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
-
-![picture of mining information](images/mining_infos.png)
-
-I combined my html+skeleton prototype with some Flask and GPIO test scripts. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
-
-![animation of brewing espresso via Web App](images/webAppEspresso.gif)
-
-The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
-
-I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
-
 
 Everything is fitting quite nice into the spacious area next to the original electronics. I reused the original cable managment to run the power cord for the USB power-supply powering the Raspberry Pi.
 
