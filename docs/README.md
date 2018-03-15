@@ -66,11 +66,13 @@ On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb da
 #### My coffee machine is able to mine crypto currencies (in a very unprofitable way)
 The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
 
-It is running 24/7 via nohup.
+I wrote a little bash-script to start the miner with all the needed login credentials to connect to the mining pool. The bash script is started via the nohup command to prevent it from shutting down when the ssh-connection to the RPi is closed.
 
-If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the last line of my miners console output is read. Everything is shown in some kind of output display.
+The nice thing about nohup is its automatic terminal-to-file output. So, getting the miner's current status can be simply done by reading the last line of that file.
 
-I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
+If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the miners nohup output is read. Everything is shown in some kind of output display.
+
+I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny thing to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
 
 Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
 In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
