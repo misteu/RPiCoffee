@@ -79,25 +79,63 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 
 Everything was uploaded to my github-repo at the UI path.
 
-#### First iteration: WebApp-UI
-Some time ago I put together a simple UI-prototype for the planned web app. It will be rendered by a Flask Webserver on the raspberry. The interface should be responsive and useable on mobile and desktop browsers. I will use the skeleton CSS-only-framework for the responsiveness.
-
-I used flaticons.com to find some nice icons (see credits below the images). As soon as the technical stuff is working, I will do a redesign with my own icons and update everything to the state actually implemented.
-
-Here are some impressions of the first iteration:
-
-![Image of splashscreen](images/UI-Prototype/Mobile_OFFLINE_splash.jpg)
-![Image of Offline Screen](images/UI-Prototype/Mobile_ONLINE.jpg)
-
-**Credits for the nice icons:**
-
-Icon made by Freepik from [www.flaticon.com] (coffee cup)
-
-Icon made by Creaticca Creative Agency from [www.flaticon.com] (shower)
-
-Icon made by Smashicons from [www.flaticon.com] (pie chart, settings)
-
 ### Electromechanical stuff
+
+The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
+
+It is running 24/7 via nohup.
+
+If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the last line of my miners console output is read. Everything is shown in some kind of output display.
+
+I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
+
+Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
+In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
+
+Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
+
+![picture of mining information](images/mining_infos.png)
+
+I combined my html+skeleton prototype with some Flask and GPIO test scripts. Here you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because it is never used.
+
+The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
+
+I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
+
+![animation of brewing espresso via Web App](images/webAppEspresso.gif)
+
+
+Everything is fitting quite nice into the spacious area next to the original electronics. I reused the original cable managment to run the power cord for the USB power-supply powering the Raspberry Pi.
+
+![picture of cable management: interface PCB and RPi](images/interface+RPi_cable_management.jpg)
+![picture of power cord running out of the machine](images/RPi_powercord.jpg)
+
+
+My interface circuit is connected via these colorful 2,54mm grid jumper wires to the Raspberry Pi. I ordered a lot of them on ebay/china some time ago. They are available with male and female connectors in different lengths, pricing around 1-2€ for a package of 40. I also used them to connect the coffee-machine's buttons to the interface circuit. Therefore I cutted them and soldered enamelled copper wire to them (see below).
+![picture of connected interface PCB, RPi and power cord](images/interface+RPi_full.jpg)
+![picture of connected interface PCB](images/interface_connected.jpg)
+
+All the parts soldered to the PCB. Unfortunately, I did not route one of the ground lines. That is why there is a small pice of enamelled copper wire running at the lower edge of the PCB.
+I did not solder any smd stuff before this project. But it worked pretty good with the help of flux! I applied a mixture of colophonium and ethanol to the PCB and used my standard soldering tip with 1mm solder and somethin around 330°C.
+I put some sockets to the PCB for the optocouplers because I did not want to heat-stress the stuff inside of them too much.
+
+![picture of soldered interface PCB](images/PCB_soldered.jpg)
+
+Front and back view of the PCBs. I really like the printing quality!
+![picture of PCB's front](images/PCB_front.jpg)
+![picture of PCB's back](images/PCB_back.jpg)
+
+The components labels placing is not really helpful and sometimes not readable but my focus was to save as much space as possible. Anyway, not a big deal. I will solder it with my PCB software openend ;-)
+
+The PCBs are delivered!
+![picture of PCBs printed by oshpark](images/PCB_delivery.jpg)
+
+Ordered: 18th February
+
+Shipped: 27th February
+
+Recieved (Germany): something around 6th March
+
 
 Finally I designed the PCB of the interface circuit. Luckily oshpark has a good documentation for accepted PCB-files from different softwares, so I picked one of these softwares. After some youtube-videos I was able to design my PCB in KiCad.
 Despite of rearranging everything nicely there aren't any big changes to the prototyped circuit. In my final iteration of the PCB, I changed the resistors and transistors to SMD parts. Otherwise the cost for my order would have been doubled. Now it is 12$ for three PCBs
