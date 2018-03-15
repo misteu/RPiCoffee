@@ -58,6 +58,8 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 
 [X] Redesign User-interface
 
+
+
 ### Intro ###
 The easiest way is to hack the existing frontpanel via overriding its pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
 
@@ -70,7 +72,10 @@ The RPi will be powered by its own USB-power supply because I do not know how st
 On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb database for some data collecting.
 
 
+
 ### Mobile / Responsive User Interface stuff
+
+
 
 **A little bit about the UI talking to the machine**
 
@@ -113,6 +118,8 @@ def controlMachine():
 	return str(message[str(action)])
 ```
 
+
+
 #### My coffee machine is able to mine crypto currencies (in a very unprofitable way)
 The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
 
@@ -131,6 +138,8 @@ Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice
 
 ![picture of mining information](images/mining_infos.png)
 
+
+
 #### WebApp-UI talking to the hardware
 I combined my html+skeleton prototype with some Flask and the LED() function of the Python module gpiozero. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
 
@@ -139,6 +148,7 @@ I combined my html+skeleton prototype with some Flask and the LED() function of 
 The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
 
 I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
+
 
 
 #### Second iteration: WebApp-UI
@@ -155,6 +165,8 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 ![Image of new UI](images/UI_Responsive.gif)
 
 Everything was uploaded to my github-repo at the UI path.
+
+
 
 ### Electromechanical stuff
 
@@ -254,8 +266,3 @@ I will have to rework the running of the wires a little bit because right now th
 First step is finished with soldering jumper cables to every switch. I planned to do the same with the LEDs for reading out the machine's status and errors but the SMD-LEDs are pretty small and my solder tip seemed to big for proper soldering. You can see them some of them (DL3 - DL5) in the first row of the circuit board.
 
 The frontpanel looked very spacious at first, but there is a grid of plastic under the buttons giving minimal space for running the wires. This plastic construction is for transfering the mechanical force to the actual pushbuttons on the circuit and manages to transfer the light of the SMD-LEDs to the front. So if you really mess up, the buttons stop working, the LED's light will be blocked and the case of the frontpanel will not close anyway. You could cut the grid a little bit, but I wanted to modify the machine as little as possible.
-
-
-
-
-
