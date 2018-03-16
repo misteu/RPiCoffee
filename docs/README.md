@@ -26,39 +26,6 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
-## Progress / ToDo
-
-[ ] Checkout the positions of relevant sensors (water, coffe grounds level) for feedback
-
-[ ] Implement mongoDB for statistics, settings, etc.
-
-[ ] Changing the HTTP-Requests to a RESTful way of interaction --> would be nice for further developments like retrieving statistics!
-
-[ ] Document the API via Swagger / OpenAPI
-
-[x] Mining crypto currencies with the RPi and display the miner's status inside the WebApp
-
-[x] Soldering jumper wires to all of the frontpanel buttons
-
-[x] First Prototype for web app
-
-[x] Rework on the wire management
-
-[x] Design and order interface PCB
-
-[X] Solder the interface circuit
-
-[X] Practice SMD soldering maybe order some SMD solder tips
-
-[x] First prototype of the interface circuit
- 
-[x] First espresso via webbrowser
-
-[x] Find a way to read out LEDs at the frontpanel
-
-[X] Redesign User-interface
-
-
 
 ### Intro ###
 The easiest way is to hack the existing frontpanel via overriding its pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
