@@ -86,27 +86,6 @@ def controlMachine():
 ```
 
 
-
-#### My coffee machine is able to mine crypto currencies (in a very unprofitable way)
-The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
-
-I wrote a little bash-script to start the miner with all the needed login credentials to connect to the mining pool. The bash script is started via the nohup command to prevent it from shutting down when the ssh-connection to the RPi is closed.
-
-The nice thing about nohup is its automatic terminal-to-file output. So, getting the miner's current status can be simply done by reading the last line of that file.
-
-If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the miners nohup output is read. Everything is shown in some kind of output display.
-
-I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny thing to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
-
-Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
-In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
-
-Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
-
-![picture of mining information](images/mining_infos.png)
-
-
-
 #### WebApp-UI talking to the hardware
 I combined my html+skeleton prototype with some Flask and the LED() function of the Python module gpiozero. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
 
@@ -153,6 +132,24 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 
 Everything was uploaded to my github-repo at the UI path.
 
+
+#### My coffee machine is able to mine crypto currencies (in a very unprofitable way) +++ UPDATE: Mining still possible but stopped right now +++
+The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
+
+I wrote a little bash-script to start the miner with all the needed login credentials to connect to the mining pool. The bash script is started via the nohup command to prevent it from shutting down when the ssh-connection to the RPi is closed.
+
+The nice thing about nohup is its automatic terminal-to-file output. So, getting the miner's current status can be simply done by reading the last line of that file.
+
+If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the miners nohup output is read. Everything is shown in some kind of output display.
+
+I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny thing to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
+
+Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
+In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
+
+Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
+
+![picture of mining information](images/mining_infos.png)
 
 
 ### Electromechanical stuff
