@@ -42,6 +42,14 @@ On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb da
 
 ### Mobile / Responsive User Interface stuff
 
+#### WebApp-UI talking to the hardware
+I combined my html+skeleton prototype with some Flask and the LED() function of the Python module gpiozero. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
+
+![animation of brewing espresso via Web App](images/webAppEspresso.gif)
+
+The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
+
+I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
 
 
 **A little bit about the UI talking to the machine**
@@ -84,16 +92,6 @@ def controlMachine():
 
 	return str(message[str(action)])
 ```
-
-
-#### WebApp-UI talking to the hardware
-I combined my html+skeleton prototype with some Flask and the LED() function of the Python module gpiozero. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
-
-![animation of brewing espresso via Web App](images/webAppEspresso.gif)
-
-The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
-
-I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
 
 
 #### Two additional API Calls (weather and train departure)
