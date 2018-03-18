@@ -15,7 +15,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 ```
 'Cause nobody likes to wait for the machine.
 
-* in fact: There are no JSONs involved right now :-D (see section "A little bit about [...]") Maybe in the future I will design a RESTful API supporting some neat JSON-responses like the one above *
+_in fact: There are no JSONs involved right now :-D (see section "A little bit about [...]") Maybe in the future I will design a RESTful API supporting some neat JSON-responses like the one above_
 
 
 **Possible scenarios are:**
