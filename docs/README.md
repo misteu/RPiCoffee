@@ -103,7 +103,7 @@ def controlMachine():
 
 I stopped the crypto-mining and implemented two other APIs instead. It is still possible to check the miners status via the URL /?infos=show&mining=show but I reused its button for checking train departure times.
 
-I use the hafas-API, which is free but you need to write an email to them to get a demo-key. If you still want to use it afterwards, you have to sign some kind of agreement.
+I use the hafas-API, which is free but you need to write an email to vbb to get a demo-key. If you want to use it after trying it out, you have to sign some kind of agreement. But still it is free to use ;-)
 
 You can get infos to their API here: [http://demo.hafas.de/openapi/vbb-proxy/](http://demo.hafas.de/openapi/vbb-proxy/)
 
