@@ -52,7 +52,8 @@ The feature menus (statistics, settings and mining) are not implemented right no
 I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
 
 +++ update +++
-instead of mining, there is now implemented an info screen with train departure times. See section "API-Calls [...]" below
+
+Instead of the fun but pretty useless mining, there is now implemented an info screen with train departure times. See section "API-Calls [...]" below.
 
 **A little bit about the UI talking to the machine**
 
