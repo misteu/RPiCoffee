@@ -117,6 +117,24 @@ The feature menus (statistics, settings and mining) are not implemented right no
 I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
 
 
+#### Two additional API Calls (weather and train departure)
+
+I stopped the crypto-mining and implemented two other APIs instead. It is still possible to check the miners status via the URL /?infos=show&mining=show but I reused its button for checking train departure times.
+
+I use the hafas-API, which is free but you need to write an email to them to get a demo-key. If you still want to use it afterwards, you have to sign some kind of agreement.
+
+You can get infos to their API here: [http://demo.hafas.de/openapi/vbb-proxy/](http://demo.hafas.de/openapi/vbb-proxy/)
+
+Before that I used a public API without authentication, that was very slow (more than 3 seconds for retrieving departure information). The hafas-API ist much faster. Postman measures ~440ms response delay for a request on their service "departureBoard".
+
+The second API I integrated is the [https://www.metaweather.com/](https://www.metaweather.com/). This one is one of the nicest APIs I have seen so far. It is structured very good (no deep trees of JSON) and the creators even give access to some nice weather icons you may use. The icon's filenames are exactly like the corresponding JSON values, e.g. "lc" and "lc.svg" for "Light Cloud"! How cool is that? No need to search for icons or parse anything :-)
+
+And: No need to sign up for anything! For example, here is the ressource (for Berlin) I use: [https://www.metaweather.com/api/location/638242/](https://www.metaweather.com/api/location/638242/) :-)
+
+![Image of weather gadget](images/UI_weather_widget.png)
+
+![Image of train departure table](images/UI_metro_widget.png)
+
 
 #### Second iteration: WebApp-UI
 I made a redesign of the UI because I did not like the dark theme (see below). I began prototyping the complete thing in Sketch and transfered it later to HTML and CSS with the help of Skeleton ([getskeleton.com](http://www.getskeleton.com)) and Sketch's CSS and SVG output-features. 
