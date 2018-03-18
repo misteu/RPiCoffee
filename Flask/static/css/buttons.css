@@ -24,14 +24,19 @@
   display: none;
   font-size: 48px; }
 
-.goodMorning h1 {
+.temp {
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 10px; }
+
+.goodMorning h3 {
   /* Guten Morgen, */
   text-align: left;
   margin-bottom: -48px; }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-  .goodMorning h1 {
+  .goodMorning h3 {
     /* Guten Morgen, */
     margin-bottom: 0px; } }
 /* For devices larger than 1000px */
@@ -39,7 +44,7 @@
   .icon {
     display: inline; }
 
-  .goodMorning h1 {
+  .goodMorning h3, h5 {
     text-align: center; } }
 .titleFont {
   font-size: 18px; }
@@ -59,6 +64,9 @@ body {
   opacity: 0.8;
   font-size: 18px;
   font-weight: 500; }
+
+.button img {
+  margin: auto; }
 
 .x1Button {
   height: 100%; }
@@ -82,8 +90,11 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.5rem;
-  margin-top: 0.5rem; }
+  margin-top: 0.5rem;
+  top: 0px; }
 
 .buttonIcon {
   max-width: 100%;
   max-height: 100%; }
+
+/*# sourceMappingURL=buttons.css.map */

@@ -1,4 +1,24 @@
 /* layout definitions */
+.weatherInfoBar {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: none;
+  opacity: 0.4;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  border-radius: 5px;
+  color: #515a47;
+  /*
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(201,201,201,0.2);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(201,201,201,0.2);
+  box-shadow: 0px 0px 5px 1px rgba(201,201,201,0.2);
+  */ }
+
+@media (min-width: 550px) {
+  .weatherInfoBar {
+    display: block; } }
 .titleFont {
   position: relative;
   width: 100%;
@@ -7,6 +27,9 @@
   margin-top: 1%;
   margin-bottom: 5%;
   z-index: 200; }
+
+.titleFont div, img {
+  margin-bottom: -10px; }
 
 .minerinfo {
   border-style: solid;

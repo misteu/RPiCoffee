@@ -52,14 +52,19 @@ own imports
   display: none;
   font-size: 48px; }
 
-.goodMorning h1 {
+.temp {
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 10px; }
+
+.goodMorning h3 {
   /* Guten Morgen, */
   text-align: left;
   margin-bottom: -48px; }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-  .goodMorning h1 {
+  .goodMorning h3 {
     /* Guten Morgen, */
     margin-bottom: 0px; } }
 /* For devices larger than 1000px */
@@ -67,7 +72,7 @@ own imports
   .icon {
     display: inline; }
 
-  .goodMorning h1 {
+  .goodMorning h3, h5 {
     text-align: center; } }
 .titleFont {
   font-size: 18px; }
@@ -598,3 +603,5 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+
+/*# sourceMappingURL=skeleton.css.map */

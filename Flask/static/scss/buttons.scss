@@ -15,6 +15,11 @@ $height2Button: 100px;
   	font-weight: 500;
 }
 
+
+.button img {
+	margin: auto;
+}
+
 .x1Button {
 	height: $height1Button;
 }
@@ -43,6 +48,7 @@ $height2Button: 100px;
   justify-content: center;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+  top: 0px;
 }
 
 .buttonIcon {

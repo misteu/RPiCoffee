@@ -7,8 +7,14 @@ $typeFamilyLight: Lato-Thin, sans-serif;
 	font-size: 48px;
 	}
 
+	.temp {
+		font-size: 12px;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
 
-.goodMorning h1 {
+
+.goodMorning h3 {
 	/* Guten Morgen, */
 	text-align: left;
 	margin-bottom: -48px;
@@ -16,7 +22,7 @@ $typeFamilyLight: Lato-Thin, sans-serif;
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-	.goodMorning h1 {
+	.goodMorning h3 {
 	/* Guten Morgen, */
 		margin-bottom: 0px;
 	}
@@ -29,7 +35,7 @@ $typeFamilyLight: Lato-Thin, sans-serif;
   .icon {
     display: inline;}
 
-   .goodMorning h1 {
+   .goodMorning h3, h5 {
    	text-align: center;
    }
 }

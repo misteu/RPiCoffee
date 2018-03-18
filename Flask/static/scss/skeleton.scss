@@ -191,6 +191,7 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; 
+
 }
 .button:hover,
 button:hover,
@@ -204,7 +205,9 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
   border-color: #888;
-  outline: 0; }
+  outline: 0; 
+  
+}
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
@@ -225,7 +228,9 @@ input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: $colorButtonGrayHover;
-  border-color: $colorButtonGrayHover; }
+  border-color: $colorButtonGrayHover; 
+
+}
 
 
 /*Power Off Button (red)*/
