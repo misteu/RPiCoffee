@@ -15,6 +15,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 ```
 'Cause nobody likes to wait for the machine.
 
+
 **Possible scenarios are:**
 - turn on and shutting down the machine via HTTP-request
 - brewing single and double espresso via HTTP-request
@@ -25,29 +26,6 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 - rendering a responsive web-app for better user experience
 - data logging and visualisation in the web-app
 
-## Progress / ToDo
-
-[x] Soldering jumper wires to all of the frontpanel buttons
-
-[x] First Prototype for web app
-
-[x] Rework on the wire management
-
-[x] Design and order interface PCB
-
-[ ] Solder the interface circuit
-
-[ ] Practice SMD soldering maybe order some SMD solder tips
-
-[x] First prototype of the interface circuit
- 
-[x] First espresso via webbrowser
-
-[ ] Checkout the positions of relevant sensors (water, coffe grounds level) for direct access
-
-[x] Find a way to read out LEDs at the frontpanel
-
-[X] Redesign User-interface
 
 ### Intro ###
 The easiest way is to hack the existing frontpanel via overriding its pushbuttons. The HTTP-stuff can be handled by a microcontroller with a wifi-shield or a microcomputer like the the RaspberryPi Zero W which has built-in wifi.
@@ -61,7 +39,83 @@ The RPi will be powered by its own USB-power supply because I do not know how st
 On the RPi there will be running Flask for the HTTP-stuff and maybe a mongodb database for some data collecting.
 
 
+
 ### Mobile / Responsive User Interface stuff
+
+
+
+**A little bit about the UI talking to the machine**
+
+In fact, there is no JSON parsing going on in the actual implementation (in contrast to the idea the example in the beginning may imply). I created two dictionaries with (I hope) self explaining keys, one for the action and one for a status message. The dictionary helps to abstract the GPIO pins to their actual functions (like brewing espresso) and make the code more readable.
+
+The value of each item is the related to a GPIO Pin. The RPi Zero's GPIO Pins are accessible via the LED()-function of the Python-module gpiozero. Each pin can be enabled and disabled via the LED(x).on() and LED(x).off().
+
+My dictionaries look like this:
+
+```
+	# Turn machine on/off: blue wires
+	outputs["onOff"] = LED(26)
+	message["onOff"] = "Maschine faehrt hoch oder runter!"
+
+	# Single espresso: white wires
+	outputs["espressoX1"] = LED(19)
+	message["espressoX1"] = "Einfacher Espresso im Bau!"
+```
+
+In concluson, transferring an HTML-button press via Flask to a button on the coffee-machine is as simple as:
+
+```
+@app.route("/", methods=['POST'])
+def controlMachine():
+
+	# possible actions = dictionary-keys
+
+	action = request.form['action']
+	print("Action: {}".format(action))
+
+	# press button
+	outputs[str(action)].on()
+
+	# hold button for 200ms
+	sleep(0.2)
+
+	# release button
+	outputs[str(action)].off()
+
+	return str(message[str(action)])
+```
+
+
+
+#### My coffee machine is able to mine crypto currencies (in a very unprofitable way)
+The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
+
+I wrote a little bash-script to start the miner with all the needed login credentials to connect to the mining pool. The bash script is started via the nohup command to prevent it from shutting down when the ssh-connection to the RPi is closed.
+
+The nice thing about nohup is its automatic terminal-to-file output. So, getting the miner's current status can be simply done by reading the last line of that file.
+
+If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the miners nohup output is read. Everything is shown in some kind of output display.
+
+I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny thing to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
+
+Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
+In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
+
+Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
+
+![picture of mining information](images/mining_infos.png)
+
+
+
+#### WebApp-UI talking to the hardware
+I combined my html+skeleton prototype with some Flask and the LED() function of the Python module gpiozero. In the animation below you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because in general it is never used.
+
+![animation of brewing espresso via Web App](images/webAppEspresso.gif)
+
+The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
+
+I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
+
 
 
 #### Second iteration: WebApp-UI
@@ -79,31 +133,17 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 
 Everything was uploaded to my github-repo at the UI path.
 
+
+
 ### Electromechanical stuff
 
-The mining "menu" is implemented. I installed a miner on the RPi to mine "MagiCoins" (XMG) for the suprnova-Pool. I installed everything like shown here: [http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/](http://techgeeks.de/bitcoin-mining-mit-dem-raspberry-pi-3/)
+One of the big next goals is to get feedback of the hardware. It would be very helpful to see if the machine is running or shut down. You could check and hear it from distance by pressing the clean button and press it again to stop the machine from pumping water. Obviously that is not very convenient.
 
-It is running 24/7 via nohup.
+Also if the water level is too low or the coffee grounds box is full, the machine would not react to any input but turning off. But like in the first example, the user is not informed by that.
 
-If the mining-button is clicked, there are made some API calls to my suprnova-account, coinmarketcap.com (for the exchange rate) and the last line of my miners console output is read. Everything is shown in some kind of output display.
+One way to get feedback is to grab the LEDs' signals and convert them to the 3,3V level of the RPi. I already soldered enamelled copper wires to some testpoints of the front-panel PCB and made some experiments. Unfortunately the signals are not as easy to distinguish as expected. My last try was to read the voltage drops via the A/D converter of an attiny. That looked promising at first but did not work as reliable as needed. I think it has something to do with the LEDs' PWM control. Therefore the signal has to be filtered somehow. That could be done inside the attiny or the RPi.
 
-I do not know very much about crypto currencies and I am not really interested in them. But I thought it is a funny to let the coffee machine do some mining in the background. I did not optimize aything on the RPi and it is totally not profitable right now. In the screenshot it is running for ~1,5 days. Do the math with the given rate for electricity :-)
-
-Fun fact: In the link above the mining was profitable on a Raspberry Pi 3 (based on January 2018). 
-In my case do use a much slower RPi Zero with just one CPU core. Maybe one reason for not coming close to the results shown in the article. Also the difficulty should be much higher right now ;-)
-
-Therefore it is reasonable to stop it in near future :-) Maybe one XMG is a nice goal.
-
-![picture of mining information](images/mining_infos.png)
-
-I combined my html+skeleton prototype with some Flask and GPIO test scripts. Here you can see one of the first iterations. All the buttons of the machine's front are accessible programatically right now. The "steam button" is not implemented in the WebApp because it is never used.
-
-The feature menus (statistics, settings and mining) are not implemented right now. I implemented a small java script popup to inform the user about that when one of these buttons is clicked.
-
-I already installed mongoDB on the raspberry to save statistics and settings and made some first experiments.
-
-![animation of brewing espresso via Web App](images/webAppEspresso.gif)
-
+Another approach (that might be easier and probably does not need any filtering) is to directly grab the sensors signals, like the water-level sensor below the watercontainer.
 
 Everything is fitting quite nice into the spacious area next to the original electronics. I reused the original cable managment to run the power cord for the USB power-supply powering the Raspberry Pi.
 
@@ -193,8 +233,3 @@ I will have to rework the running of the wires a little bit because right now th
 First step is finished with soldering jumper cables to every switch. I planned to do the same with the LEDs for reading out the machine's status and errors but the SMD-LEDs are pretty small and my solder tip seemed to big for proper soldering. You can see them some of them (DL3 - DL5) in the first row of the circuit board.
 
 The frontpanel looked very spacious at first, but there is a grid of plastic under the buttons giving minimal space for running the wires. This plastic construction is for transfering the mechanical force to the actual pushbuttons on the circuit and manages to transfer the light of the SMD-LEDs to the front. So if you really mess up, the buttons stop working, the LED's light will be blocked and the case of the frontpanel will not close anyway. You could cut the grid a little bit, but I wanted to modify the machine as little as possible.
-
-
-
-
-
