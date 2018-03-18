@@ -131,8 +131,10 @@ The second API I integrated is the [https://www.metaweather.com/](https://www.me
 
 And: No need to sign up for anything! For example, here is the ressource (for Berlin) I use: [https://www.metaweather.com/api/location/638242/](https://www.metaweather.com/api/location/638242/) :-)
 
+I gave it a very subtle look, to not distract too much from the WebApps main purpose ;)
 ![Image of weather gadget](images/UI_weather_widget.png)
 
+I do extract only the trains with the direction I need and limit the initially shown departure times to five trains. With the button "Mehr Verbindungen" (= show more connections), every departure time I extracted is shown. The API shows only trains with max. one hour depature time in future resulting in ~19 rows after clicking that button.
 ![Image of train departure table](images/UI_metro_widget.png)
 
 
