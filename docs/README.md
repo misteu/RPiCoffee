@@ -17,6 +17,7 @@ This project's goal is to make a coffee machine responsive to different HTTP-Req
 
 _in fact: There are no JSONs involved right now :-D (see section "A little bit about [...]") Maybe in near future I will design a RESTful API supporting some cool JSON-responses like the one above_
 
+see the project's wiki for more detailled information: [https://github.com/misteu/RPiCoffee/wiki](https://github.com/misteu/RPiCoffee/wiki)
 
 **Possible scenarios are:**
 - turn on and shutting down the machine via HTTP-request
