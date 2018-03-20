@@ -70,5 +70,3 @@ All the hover interaction-stuff and responsiveness is finished. Everything else 
 ![Image of new UI](images/UI_fullsize.jpg)
 
 ![Image of new UI](images/UI_Responsive.gif)
-
-Everything was uploaded to my github-repo at the UI path.
