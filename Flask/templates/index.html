@@ -39,11 +39,16 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="bodyContainer">
-</div>
+
+
   <div class="titleFont">
-    <span><a href="/" class="button">&nbsp; espresso x rpi &nbsp;</a></span>
+    <span style="opacity: 0.5;"><a href="/" class="button button-primary">&nbsp;  espresso ☕ rpi &nbsp;</a></span>
+    
+  
   </div>
+
   <div class="mainCard">
+  
     <div class="triangles">
       <div class="bgMainTriangle1">
       </div>
@@ -61,25 +66,145 @@
                 <span>&nbsp; <!-- Whitespace --></span>
               </div>
               <div class="ten columns">
-                <div class="goodMorning"> <h1><span class="icon">🥖 </span>Guten Morgen!<span class="icon"> 🍳</span></h1></div>
+                {% if greeting %}
+                <div class="goodMorning"> <h3><span class="icon">🥖 </span>{{headline}}<span class="icon"> 🍳</span></h3></div>
+                {% endif %}
+
+                {% if not greeting %}
+                <div class="goodMorning"> <h3><span class="icon">🚂 </span>Die nächsten S-Bahnen Richtung Westen<span class="icon"> 🚋</span></h3>
+                  <h5>ab S+U Lichtenberg</h5>
+                </div>
+                {% endif %}
+
               </div>
               <div class="one column">
                 <span>&nbsp; <!-- Whitespace --></span>
               </div>
             </div>
-            <div class="row" id="minerinfo" style="display: {{ display }}">
+            <div class="row" id="minerinfo" style="display: {{ display_mining}}">
               <div class="one column">&nbsp; <!-- Whitespace --></div>
               <div class="ten columns">
-                <div class="minerinfo">
-                <h5><b>Kontostand:</b><br> {{ credit }} XMG, {{ creditEUR }} €<br>
-                XMG/EUR @ coinmarketcap.com: {{ price_eur }}<br></h5>
-                Strompreis RPi / Tag: {{strompreisRPiTagEUR}} € @ {{ arbeitspreis }} ct/kWh<br>
-                Letzter Status: {{ status }}<br>
-                Hashrate (xmg.suprnova.cc): {{ hashrate }} kh/s<br>
-                </div>
+                <table class="u-full-width">
+                  <tr>
+                    <td><b>Kontostand:</b></td>
+                    <td>{{ credit }} XMG bzw. {{ creditEUR }} €</td>
+                  </tr>
+                  <tr>
+                    <td><b>Wechselkurs aktuell:</b>:</td>
+                    <td>{{ price_eur }} EUR/XMG</td>
+                  </tr>
+                  <tr>
+                    <td><b>Letzter Miner-Status:</b></td>
+                    <td>{{ status }}</td>
+                  </tr>
+                </table>
               </div>
               <div class="one column">&nbsp; <!-- Whitespace --></div>
             </div>
+
+            <!-- TRAIN Departures -->
+
+
+            <div class="row" style="display: {{ display_trains}}">
+              <div class="one column">&nbsp; <!-- Whitespace --></div>
+              <div class="ten columns"> 
+                <table class="u-full-width">
+                  <thead>
+                    <tr>
+                      <th>Abfahrt</th>
+                      <th>Linie</th>
+                      <th>Richtung</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for train in trains %}
+                  <tr>
+                    <td>{{ train.departure }}</td><td>{{train.line}}</td> <td>{{ train.direction }}</td>
+                  <tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+                <div align="center">
+                {% if not showMore %}
+                <div>
+                  <div class="button button-primary" onclick="location.href = '/?infos=show&showMore=true';" style="width:200px; margin-bottom: 10px;">
+                  &nbsp; Mehr Verbindungen &nbsp;
+                  </div>
+                </div>
+              
+                {% endif %}
+                <div>
+                  <div class="button button-primary" onclick="location.href = '/';" style="width:200px; ">
+                  &nbsp; Abfahrtsplan schließen &nbsp;
+                  </div>
+                </div>
+                </div>
+                <br>
+                <!--
+                Strompreis RPi / Tag: {{strompreisRPiTagEUR}} € @ {{ arbeitspreis }} ct/kWh<br>
+                Letzter Status: {{ status }}<br>
+                Hashrate (xmg.suprnova.cc): {{ hashrate }} kh/s<br>
+                -->
+              </div>
+              <div class="one column">&nbsp; <!-- Whitespace --></div>
+            </div>
+
+            <!-- END OF TRAIN Departures -->
+
+
+            <!-- MONGODB Ouptut -->
+
+            <div class="row" style="display: {{ display_stats}}">
+              <div class="one column">&nbsp; <!-- Whitespace --></div>
+              <div class="ten columns"> 
+                <table class="u-full-width">
+                  <thead>
+                    <tr>
+                      <th>Zeit</th>
+                      <th>Nutzer</th>
+                      <th>IP</th>
+                      <th>action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for stat in stats %}
+                  <tr>
+                    <td>{{ stat.time }}</td><td>{{stat.username}}</td> <td>{{ stat.userip }}</td><td>{{ stat.action }}</td>
+                  <tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+                <div align="center">
+                <!--
+                {% if not showMore %}
+                <div>
+                  <div class="button button-primary" onclick="location.href = '/?infos=show&showMore=true';" style="width:200px; margin-bottom: 10px;">
+                  &nbsp; Mehr Stats &nbsp;
+                  </div>
+                </div>
+                {% endif %}
+                -->
+
+                <div>
+                  <div class="button button-primary" onclick="location.href = '/';" style="width:200px; ">
+                  &nbsp; Stats schließen &nbsp;
+                  </div>
+                </div>
+                </div>
+                <br>
+                <!--
+                Strompreis RPi / Tag: {{strompreisRPiTagEUR}} € @ {{ arbeitspreis }} ct/kWh<br>
+                Letzter Status: {{ status }}<br>
+                Hashrate (xmg.suprnova.cc): {{ hashrate }} kh/s<br>
+                -->
+              </div>
+              <div class="one column">&nbsp; <!-- Whitespace --></div>
+            </div>
+
+
+            <!-- END OF MONGODB OUTPUT -->
+
+
             <div class="row">
               <div class="one column">
                 <span>&nbsp; <!-- Whitespace --></span>
@@ -132,10 +257,10 @@
                 </div>
               </div>
               <div class="two columns flexButtonsContainer">
-                <div class="button button-primary buttonIconAligner x1x1Button flexButton" onclick="showComingSoon()">
+                <div class="button button-primary buttonIconAligner x1x1Button flexButton" onclick="location.href = '?stats=show';">
                   <img src="{{url_for('static', filename='images/icons/stats/1x1.svg')}}">
                 </div>
-                <div class="button button-primary buttonIconAligner x1x1Button flexButton" onclick="location.href = '?minerInfos=show';">
+                <div class="button button-primary buttonIconAligner x1x1Button flexButton" onclick="location.href = '?infos=show';">
                   <img src="{{url_for('static', filename='images/icons/bitcoin/1x1.svg')}}">
                 </div>
               </div>
@@ -151,7 +276,15 @@
       <div class="bgMainTriangle4">
       </div>
     </div>
+
+<div class="weatherInfoBar">
+      <p class="temp">Heute: <img src="https://www.metaweather.com/static/img/weather/{{weatherIcon1}}.svg" class="u-max-full-width" width="40px" height="40px">{{tempMinMax1}}</p>
+      <p class="temp">Morgen: <img src="https://www.metaweather.com/static/img/weather/{{weatherIcon2}}.svg" class="u-max-full-width" width="40px" height="40px">{{tempMinMax2}}</p>
+      <p class="temp">Übermorgen: <img src="https://www.metaweather.com/static/img/weather/{{weatherIcon3}}.svg" class="u-max-full-width" width="40px" height="40px">{{tempMinMax3}}</p>
+    </div>
+
   </div>
+</div>
 
   <script>
 function showComingSoon() {
@@ -179,7 +312,7 @@ function enable(action) {
         alert(this.responseText);
     }
   };
-  xhttp.open("POST", "http://192.168.178.37:80/", true);
+  xhttp.open("POST", "{{rpiIP}}", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("action="+action);
 
