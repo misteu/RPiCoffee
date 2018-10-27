@@ -1,0 +1,163 @@
+(pcb C:\Users\Michael\ownCloud\kaffee\kaffeeInterface.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "4.0.7")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  161290 -114300  123190 -114300  123190 -82550  161290 -82550
+            161290 -114300  161290 -114300)
+    )
+    (via "Via[0-1]_600:400_um")
+    (rule
+      (width 250)
+      (clearance 200.1)
+      (clearance 200.1 (type default_smd))
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component LEDs:LED_D4.0mm
+      (place D1 128270 -88900 front 90 (PN LED))
+      (place D2 135890 -100330 front 270 (PN LED))
+      (place D3 128270 -100330 front 270 (PN LED))
+    )
+    (component Resistors_THT:R_Bare_Metal_Element_L12.4mm_W4.8mm_P11.40mm
+      (place R1 148590 -86360 front 180 (PN R))
+      (place R2 147320 -109220 front 180 (PN R))
+      (place R3 154940 -86360 front 270 (PN R))
+    )
+  )
+  (library
+    (image LEDs:LED_D4.0mm
+      (outline (path signal 100  3270 0  3172.11 -618.034  2888.03 -1175.57  2445.57 -1618.03
+            1888.03 -1902.11  1270 -2000  651.966 -1902.11  94.429 -1618.03
+            -348.034 -1175.57  -632.113 -618.034  -730 0  -632.113 618.034
+            -348.034 1175.57  94.429 1618.03  651.966 1902.11  1270 2000
+            1888.03 1902.11  2445.57 1618.03  2888.03 1175.57  3172.11 618.034))
+      (outline (path signal 100  -730 1326.65  -730 -1326.65))
+      (outline (path signal 120  -790 1399  -790 1080))
+      (outline (path signal 120  -790 -1080  -790 -1399))
+      (outline (path signal 50  -1450 2750  -1450 -2750))
+      (outline (path signal 50  -1450 -2750  4000 -2750))
+      (outline (path signal 50  4000 -2750  4000 2750))
+      (outline (path signal 50  4000 2750  -1450 2750))
+      (pin Rect[A]Pad_1800x1800_um 1 0 0)
+      (pin Round[A]Pad_1800_um 2 2540 0)
+    )
+    (image Resistors_THT:R_Bare_Metal_Element_L12.4mm_W4.8mm_P11.40mm
+      (outline (path signal 100  -500 2400  -500 -2400))
+      (outline (path signal 100  -500 -2400  11900 -2400))
+      (outline (path signal 100  11900 -2400  11900 2400))
+      (outline (path signal 100  11900 2400  -500 2400))
+      (outline (path signal 120  -560 1680  -560 2460))
+      (outline (path signal 120  -560 2460  11960 2460))
+      (outline (path signal 120  11960 2460  11960 1680))
+      (outline (path signal 120  -560 -1680  -560 -2460))
+      (outline (path signal 120  -560 -2460  11960 -2460))
+      (outline (path signal 120  11960 -2460  11960 -1680))
+      (outline (path signal 120  1800 1000  9600 1000))
+      (outline (path signal 120  1800 880  9600 880))
+      (outline (path signal 120  1800 760  9600 760))
+      (outline (path signal 120  1800 640  9600 640))
+      (outline (path signal 120  1800 520  9600 520))
+      (outline (path signal 120  1800 400  9600 400))
+      (outline (path signal 120  1800 280  9600 280))
+      (outline (path signal 120  1800 160  9600 160))
+      (outline (path signal 120  1800 40  9600 40))
+      (outline (path signal 120  1800 -80  9600 -80))
+      (outline (path signal 120  1800 -200  9600 -200))
+      (outline (path signal 120  1800 -320  9600 -320))
+      (outline (path signal 120  1800 -440  9600 -440))
+      (outline (path signal 120  1800 -560  9600 -560))
+      (outline (path signal 120  1800 -680  9600 -680))
+      (outline (path signal 120  1800 -800  9600 -800))
+      (outline (path signal 120  1800 -920  9600 -920))
+      (outline (path signal 120  1800 1000  1800 -920))
+      (outline (path signal 120  9600 1000  9600 -920))
+      (outline (path signal 50  -1750 2750  -1750 -2750))
+      (outline (path signal 50  -1750 -2750  13150 -2750))
+      (outline (path signal 50  13150 -2750  13150 2750))
+      (outline (path signal 50  13150 2750  -1750 2750))
+      (pin Round[A]Pad_3000_um 1 0 0)
+      (pin Oval[A]Pad_3000x3000_um 2 11400 0)
+    )
+    (padstack Round[A]Pad_1800_um
+      (shape (circle F.Cu 1800))
+      (shape (circle B.Cu 1800))
+      (attach off)
+    )
+    (padstack Round[A]Pad_3000_um
+      (shape (circle F.Cu 3000))
+      (shape (circle B.Cu 3000))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_3000x3000_um
+      (shape (path F.Cu 3000  0 0  0 0))
+      (shape (path B.Cu 3000  0 0  0 0))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1800x1800_um
+      (shape (rect F.Cu -900 -900 900 900))
+      (shape (rect B.Cu -900 -900 900 900))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:400_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net GND
+      (pins D1-1 D2-1 D3-1)
+    )
+    (net "Net-(D1-Pad2)"
+      (pins D1-2 R1-2)
+    )
+    (net "Net-(D2-Pad2)"
+      (pins D2-2 R2-2)
+    )
+    (net "Net-(D3-Pad2)"
+      (pins D3-2 R3-2)
+    )
+    (net +5V
+      (pins R1-1 R2-1 R3-1)
+    )
+    (class kicad_default "" +5V GND "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D3-Pad2)"
+      (circuit
+        (use_via Via[0-1]_600:400_um)
+      )
+      (rule
+        (width 250)
+        (clearance 200.1)
+      )
+    )
+  )
+  (wiring
+    (wire (path F.Cu 250  128270 -88900  128270 -100330)(net GND)(type protect))
+    (wire (path B.Cu 250  128270 -100330  135890 -100330)(net GND)(type protect))
+    (wire (path B.Cu 250  128270 -86360  137190 -86360)(net "Net-(D1-Pad2)")(type protect))
+    (wire (path F.Cu 250  135890 -102870  135890 -109220  135920 -109220)(net "Net-(D2-Pad2)")(type protect))
+    (wire (path B.Cu 250  128270 -102870  129540 -101600  137160 -101600  140970 -97790
+            154940 -97790  154940 -97760)(net "Net-(D3-Pad2)")(type protect))
+    (wire (path F.Cu 250  148590 -86360  147320 -87630  147320 -109220)(net +5V)(type protect))
+    (wire (path F.Cu 250  148590 -86360  154940 -86360)(net +5V)(type protect))
+  )
+)
