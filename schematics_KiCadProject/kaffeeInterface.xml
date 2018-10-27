@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:/Users/Michael/ownCloud/kaffee/Kaffee_SMD/kaffeeInterface.sch</source>
-    <date>10.03.2018 11:02:21</date>
+    <source>C:/Users/Michael/Desktop/kaffeeRpi/RPiCoffee/schematics_KiCadProject/kaffeeInterface.sch</source>
+    <date>27.10.2018 14:28:29</date>
     <tool>Eeschema 4.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -473,17 +473,17 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="opto">
+      <uri>C:\Program Files\KiCad\share\kicad\library\opto.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
+    </library>
     <library logical="device">
       <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
     </library>
     <library logical="transistors">
       <uri>C:\Program Files\KiCad\share\kicad\library\transistors.lib</uri>
-    </library>
-    <library logical="conn">
-      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
-    </library>
-    <library logical="opto">
-      <uri>C:\Program Files\KiCad\share\kicad\library\opto.lib</uri>
     </library>
   </libraries>
   <nets>

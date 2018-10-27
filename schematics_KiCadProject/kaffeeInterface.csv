@@ -1,0 +1,8 @@
+"ID";"Bezeichner";"Gehäuse";"Stückzahl";"Bezeichnung";"Anbieter und Ref.";
+1;"J1,J3,J4,J5,J6,J7,J8,J9,J10";"Pin_Header_Straight_1x02_Pitch2.54mm";9;"Conn_01x02_Male";;;
+2;"J2";"Pin_Header_Straight_1x08_Pitch2.54mm";1;"Conn_01x08_Male";;;
+3;"Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8";"SOT-23";8;"BC847";;;
+4;"R1,R2,R3,R4,R13,R14,R15,R16";"R_0805_HandSoldering";8;"10k";;;
+5;"R5,R6,R7,R8,R17,R18,R19,R20";"R_0805_HandSoldering";8;"5,6k";;;
+6;"R9,R10,R11,R12,R21,R22,R23,R24";"R_0805_HandSoldering";8;"200";;;
+7;"U1,U2,U3,U4,U5,U6,U7,U8";"DIP-4_W7.62mm";8;"LTV-817";;;
